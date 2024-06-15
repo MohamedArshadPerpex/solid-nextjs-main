@@ -128,7 +128,11 @@ const About = () => {
     }
 
     // Initial setup
-    thumbnailBorderDom.appendChild(thumbnailBorderDom.firstElementChild);
+    const firstThumbnailChild = thumbnailBorderDom.firstElementChild;
+    if (firstThumbnailChild) {
+      thumbnailBorderDom.appendChild(firstThumbnailChild);
+    }
+
     let runTimeOut;
     let runNextAuto = setTimeout(() => {
       if (nextButton) nextButton.click();
