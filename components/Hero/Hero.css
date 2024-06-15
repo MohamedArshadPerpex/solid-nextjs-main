@@ -1,0 +1,78 @@
+/* Hero.css or global.css */
+
+/* AppContainer styles */
+.AppContainer {
+    width: 100vw;
+    height: 100vh;
+    color: #000000;
+    position: relative;
+    margin-left: 0px;
+    width: 98vw;
+    height: 100vh;
+    color: #000000;
+    position: relative;
+  }
+  
+  /* Loading styles */
+  .Loading {
+    height: 100%;
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Follow styles */
+  .Follow {
+    margin-left: -20px;
+    position: absolute;
+    background-color: #f48049;
+    height: 2px;
+    width: 0;
+    left: 0;
+    z-index: 2;
+  }
+  
+  /* ProgressBar styles */
+  .ProgressBar {
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    height: 2px;
+    width: 0;
+    transition: width 0.4s ease-out;
+  }
+  
+  /* Count styles */
+  .Count {
+    position: absolute;
+    font-size: 130px;
+    color: #fff;
+    transform: translateY(-15px);
+    font-weight: 500;
+    font-family: 'Arial', sans-serif; /* Example font family */
+  }
+  
+  /* Content styles */
+  .Content {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    background-color: #121212;
+    padding: auto;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    flex-direction: column;
+  }
+  
+  /* Additional styles based on your project's needs */
+  
