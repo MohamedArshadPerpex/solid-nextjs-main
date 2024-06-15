@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import "./About.css"
+import "./About.css";
 import img1 from '../../public/images/about/campus.jpg';
 import img2 from '../../public/images/about/campus01.jpg';
 import img3 from '../../public/images/about/campus02.jpg';
@@ -73,16 +73,54 @@ const About = () => {
     const nextButton = document.getElementById('next');
     const prevButton = document.getElementById('prev');
     const carouselDom = document.querySelector('.carousel');
-    const sliderDom = carouselDom.querySelector('.list');
+    const sliderDom = carouselDom ? carouselDom.querySelector('.list') : null;
     const thumbnailBorderDom = document.querySelector('.thumbnail');
 
-    // Attach event listeners for next and previous buttons
+    if (!carouselDom || !sliderDom || !thumbnailBorderDom) {
+      console.error('One of the required DOM elements is not found');
+      return;
+    }
+
+    const showSlider = (type) => {
+      const sliderItemsDom = document.querySelectorAll('.carousel .item');
+      const thumbnailItemsDom = document.querySelectorAll('.thumbnail .item');
+
+      if (type === 'next') {
+        const firstSliderItem = sliderItemsDom[0];
+        const firstThumbnailItem = thumbnailItemsDom[0];
+        if (firstSliderItem && firstThumbnailItem) {
+          sliderDom.appendChild(firstSliderItem);
+          thumbnailBorderDom.appendChild(firstThumbnailItem);
+          carouselDom.classList.add('next');
+        }
+      } else {
+        const lastSliderItem = sliderItemsDom[sliderItemsDom.length - 1];
+        const lastThumbnailItem = thumbnailItemsDom[thumbnailItemsDom.length - 1];
+        if (lastSliderItem && lastThumbnailItem) {
+          sliderDom.prepend(lastSliderItem);
+          thumbnailBorderDom.prepend(lastThumbnailItem);
+          carouselDom.classList.add('prev');
+        }
+      }
+
+      clearTimeout(runTimeOut);
+      runTimeOut = setTimeout(() => {
+        carouselDom.classList.remove('next');
+        carouselDom.classList.remove('prev');
+      }, 300);
+
+      clearTimeout(runNextAuto);
+      runNextAuto = setTimeout(() => {
+        nextButton.click();
+      }, 7000);
+    };
+
     nextButton.addEventListener('click', () => {
-      showSlider('next');    
+      showSlider('next');
     });
 
     prevButton.addEventListener('click', () => {
-      showSlider('prev');    
+      showSlider('prev');
     });
 
     // Initial setup
@@ -92,39 +130,10 @@ const About = () => {
       nextButton.click();
     }, 7000);
 
-    function showSlider(type) {
-      const sliderItemsDom = document.querySelectorAll('.carousel .item');
-      const thumbnailItemsDom = document.querySelectorAll('.thumbnail .item');
-    
-      if (type === 'next') {
-        const firstSliderItem = sliderItemsDom[0];
-        const firstThumbnailItem = thumbnailItemsDom[0];
-        if (firstSliderItem && firstThumbnailItem) {
-          document.querySelector('.carousel .list').appendChild(firstSliderItem);
-          document.querySelector('.thumbnail').appendChild(firstThumbnailItem);
-          carouselDom.classList.add('next');
-        }
-      } else {
-        const lastSliderItem = sliderItemsDom[sliderItemsDom.length - 1];
-        const lastThumbnailItem = thumbnailItemsDom[thumbnailItemsDom.length - 1];
-        if (lastSliderItem && lastThumbnailItem) {
-          document.querySelector('.carousel .list').prepend(lastSliderItem);
-          document.querySelector('.thumbnail').prepend(lastThumbnailItem);
-          carouselDom.classList.add('prev');
-        }
-      }
-    
+    return () => {
       clearTimeout(runTimeOut);
-      runTimeOut = setTimeout(() => {
-        carouselDom.classList.remove('next');
-        carouselDom.classList.remove('prev');
-      }, 300);
-    
       clearTimeout(runNextAuto);
-      runNextAuto = setTimeout(() => {
-        nextButton.click();
-      }, 7000);
-    }
+    };
   }, []);
 
   return (
@@ -142,7 +151,7 @@ const About = () => {
                 <div className="list">
                   {programmeItems.map((item, index) => (
                     <div className="item" key={index}>
-                       <Image
+                      <Image
                         src={item.image}
                         alt={item.name}
                         layout="fill"
@@ -163,7 +172,7 @@ const About = () => {
                 <div className="thumbnail">
                   {programmeItems.map((item, index) => (
                     <div className="item" key={index}>
-                       <Image
+                      <Image
                         src={item.image}
                         alt={item.name}
                         layout="fill"

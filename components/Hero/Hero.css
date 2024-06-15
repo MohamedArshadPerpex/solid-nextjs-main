@@ -12,6 +12,12 @@
     color: #000000;
     position: relative;
   }
+  @media (max-width: 392px) {
+    .AppContainer {
+      margin-top: 40px;
+    }
+  }
+  
   
   /* Loading styles */
   .Loading {

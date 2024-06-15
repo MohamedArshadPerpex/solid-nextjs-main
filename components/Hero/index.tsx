@@ -94,7 +94,7 @@ const Hero = () => {
             <h1 className="mb-5 pr-16 text-3xl font-bold xl:text-5xl">
               Are You Looking For {" "}
               <span className="relative before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                A SalesTeam
+                A SalesTeam?
               </span>
             </h1>
             <h4 className="mb-4.5 text-lg font-medium">

@@ -30,13 +30,13 @@ export default function Home() {
       <About />
       <FeaturesTab />
       <FunFact />
-      <Integration />
+      {/* <Integration /> */}
       <CTA />
       <FAQ />
-      <Testimonial />
-      <Pricing />
+      {/* <Testimonial />
+      <Pricing /> */}
       <Contact />
-      <Blog />
+      {/* <Blog /> */}
     </main>
   );
 }
