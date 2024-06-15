@@ -13,9 +13,14 @@ const Hero = () => {
 
   useEffect(() => {
     const count = setInterval(() => {
-      setCounter(prevCounter =>
-        prevCounter < 100 ? prevCounter + 1 : (clearInterval(count), setCounter(100))
-      );
+      setCounter((prevCounter) => {
+        if (prevCounter < 100) {
+          return prevCounter + 1;
+        } else {
+          clearInterval(count);
+          return 100;
+        }
+      });
     }, 25);
 
     return () => clearInterval(count);
@@ -59,7 +64,7 @@ const Hero = () => {
       });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here (Example: Logging email)
     console.log("Form submitted with email:", email);
@@ -84,8 +89,8 @@ const Hero = () => {
       {/* Content Section */}
       <div className={`mx-auto max-w-7xl px-4 md:px-8 2xl:px-0 Content ${loadingComplete ? 'show' : ''}`}>
         <div className="flex lg:items-center lg:gap-8 xl:gap-32.5" style={{
-          marginLeft:'100px',
-          width:'100%'
+          marginLeft: '100px',
+          width: '100%'
         }}>
           <div className="md:w-1/2">
             <h4 className="mb-4.5 text-lg font-medium">
@@ -104,14 +109,14 @@ const Hero = () => {
               <form className="flex flex-wrap gap-5" onSubmit={handleSubmit}>
                 <input
                   value={email}
-                  onChange={e => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   type="text"
                   placeholder="Enter your email address"
                   className="rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
                 />
                 <button
                   aria-label="get started button"
-                  className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                  className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration:300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
                 >
                   Get Started
                 </button>
