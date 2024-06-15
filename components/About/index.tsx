@@ -44,97 +44,97 @@ const About = () => {
     }
   ];
 
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-  const [currentImage, setCurrentImage] = useState(img1);
+  // const control = useAnimation();
+  // const [ref, inView] = useInView();
+  // const [currentImage, setCurrentImage] = useState(img1);
 
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     control.start("visible");
+  //   } else {
+  //     control.start("hidden");
+  //   }
+  // }, [control, inView]);
 
-  const list = {
-    visible: {
-      opacity: 1,
-    },
-    hidden: {
-      opacity: 0,
-    },
-  };
+  // const list = {
+  //   visible: {
+  //     opacity: 1,
+  //   },
+  //   hidden: {
+  //     opacity: 0,
+  //   },
+  // };
 
-  const handleCardClick = (image) => {
-    setCurrentImage(image);
-  };
+  // const handleCardClick = (image) => {
+  //   setCurrentImage(image);
+  // };
 
-  useEffect(() => {
-    const nextButton = document.getElementById('next');
-    const prevButton = document.getElementById('prev');
-    const carouselDom = document.querySelector('.carousel');
-    const sliderDom = carouselDom ? carouselDom.querySelector('.list') : null;
-    const thumbnailBorderDom = document.querySelector('.thumbnail');
+  // useEffect(() => {
+  //   const nextButton = document.getElementById('next');
+  //   const prevButton = document.getElementById('prev');
+  //   const carouselDom = document.querySelector('.carousel');
+  //   const sliderDom = carouselDom ? carouselDom.querySelector('.list') : null;
+  //   const thumbnailBorderDom = document.querySelector('.thumbnail');
 
-    if (!carouselDom || !sliderDom || !thumbnailBorderDom) {
-      console.error('One of the required DOM elements is not found');
-      return;
-    }
+  //   if (!carouselDom || !sliderDom || !thumbnailBorderDom) {
+  //     console.error('One of the required DOM elements is not found');
+  //     return;
+  //   }
 
-    const showSlider = (type) => {
-      const sliderItemsDom = document.querySelectorAll('.carousel .item');
-      const thumbnailItemsDom = document.querySelectorAll('.thumbnail .item');
+  //   const showSlider = (type) => {
+  //     const sliderItemsDom = document.querySelectorAll('.carousel .item');
+  //     const thumbnailItemsDom = document.querySelectorAll('.thumbnail .item');
 
-      if (type === 'next') {
-        const firstSliderItem = sliderItemsDom[0];
-        const firstThumbnailItem = thumbnailItemsDom[0];
-        if (firstSliderItem && firstThumbnailItem) {
-          sliderDom.appendChild(firstSliderItem);
-          thumbnailBorderDom.appendChild(firstThumbnailItem);
-          carouselDom.classList.add('next');
-        }
-      } else {
-        const lastSliderItem = sliderItemsDom[sliderItemsDom.length - 1];
-        const lastThumbnailItem = thumbnailItemsDom[thumbnailItemsDom.length - 1];
-        if (lastSliderItem && lastThumbnailItem) {
-          sliderDom.prepend(lastSliderItem);
-          thumbnailBorderDom.prepend(lastThumbnailItem);
-          carouselDom.classList.add('prev');
-        }
-      }
+  //     if (type === 'next') {
+  //       const firstSliderItem = sliderItemsDom[0];
+  //       const firstThumbnailItem = thumbnailItemsDom[0];
+  //       if (firstSliderItem && firstThumbnailItem) {
+  //         sliderDom.appendChild(firstSliderItem);
+  //         thumbnailBorderDom.appendChild(firstThumbnailItem);
+  //         carouselDom.classList.add('next');
+  //       }
+  //     } else {
+  //       const lastSliderItem = sliderItemsDom[sliderItemsDom.length - 1];
+  //       const lastThumbnailItem = thumbnailItemsDom[thumbnailItemsDom.length - 1];
+  //       if (lastSliderItem && lastThumbnailItem) {
+  //         sliderDom.prepend(lastSliderItem);
+  //         thumbnailBorderDom.prepend(lastThumbnailItem);
+  //         carouselDom.classList.add('prev');
+  //       }
+  //     }
 
-      clearTimeout(runTimeOut);
-      runTimeOut = setTimeout(() => {
-        carouselDom.classList.remove('next');
-        carouselDom.classList.remove('prev');
-      }, 300);
+  //     clearTimeout(runTimeOut);
+  //     runTimeOut = setTimeout(() => {
+  //       carouselDom.classList.remove('next');
+  //       carouselDom.classList.remove('prev');
+  //     }, 300);
 
-      clearTimeout(runNextAuto);
-      runNextAuto = setTimeout(() => {
-        nextButton.click();
-      }, 7000);
-    };
+  //     clearTimeout(runNextAuto);
+  //     runNextAuto = setTimeout(() => {
+  //       nextButton.click();
+  //     }, 7000);
+  //   };
 
-    nextButton.addEventListener('click', () => {
-      showSlider('next');
-    });
+  //   nextButton.addEventListener('click', () => {
+  //     showSlider('next');
+  //   });
 
-    prevButton.addEventListener('click', () => {
-      showSlider('prev');
-    });
+  //   prevButton.addEventListener('click', () => {
+  //     showSlider('prev');
+  //   });
 
-    // Initial setup
-    thumbnailBorderDom.appendChild(thumbnailBorderDom.firstElementChild);
-    let runTimeOut;
-    let runNextAuto = setTimeout(() => {
-      nextButton.click();
-    }, 7000);
+  //   // Initial setup
+  //   thumbnailBorderDom.appendChild(thumbnailBorderDom.firstElementChild);
+  //   let runTimeOut;
+  //   let runNextAuto = setTimeout(() => {
+  //     nextButton.click();
+  //   }, 7000);
 
-    return () => {
-      clearTimeout(runTimeOut);
-      clearTimeout(runNextAuto);
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(runTimeOut);
+  //     clearTimeout(runNextAuto);
+  //   };
+  // }, []);
 
   return (
     <div className="app__feature">
