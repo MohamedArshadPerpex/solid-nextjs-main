@@ -31,7 +31,10 @@ const FAQ = () => {
               className="hidden dark:block"
             />
           </div>
-          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-32.5">
+          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-32.5"
+          style={{
+            marginTop:'78px'
+          }}>
             <motion.div
               variants={{
                 hidden: {

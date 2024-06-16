@@ -111,31 +111,23 @@ const About = () => {
 
       clearTimeout(runNextAuto);
       runNextAuto = setTimeout(() => {
-        if (nextButton) nextButton.click();
+        nextButton.click();
       }, 7000);
     };
 
-    if (nextButton) {
-      nextButton.addEventListener('click', () => {
-        showSlider('next');
-      });
-    }
+    nextButton.addEventListener('click', () => {
+      showSlider('next');
+    });
 
-    if (prevButton) {
-      prevButton.addEventListener('click', () => {
-        showSlider('prev');
-      });
-    }
+    prevButton.addEventListener('click', () => {
+      showSlider('prev');
+    });
 
     // Initial setup
-    const firstThumbnailChild = thumbnailBorderDom.firstElementChild;
-    if (firstThumbnailChild) {
-      thumbnailBorderDom.appendChild(firstThumbnailChild);
-    }
-
+    thumbnailBorderDom.appendChild(thumbnailBorderDom.firstElementChild);
     let runTimeOut;
     let runNextAuto = setTimeout(() => {
-      if (nextButton) nextButton.click();
+      nextButton.click();
     }, 7000);
 
     return () => {

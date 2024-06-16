@@ -125,3 +125,24 @@ pre {
 .active-tab {
   @apply bg-stroke text-black dark:bg-blackho dark:text-white;
 }
+/* styles/globals.css */
+
+.scroll-container {
+  overflow-x: hidden;
+}
+
+.scroll-section-outer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.scroll-section-inner {
+  display: flex;
+  width: 900vw; /* Adjust based on the number of sections */
+}
+
+.scroll-section {
+  width: 100vw;
+  height: 100vh;
+}

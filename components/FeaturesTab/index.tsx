@@ -122,6 +122,9 @@ const FeaturesTab = () => {
               <div
                 className={feature.id === currentTab ? "block" : "hidden"}
                 key={key}
+                style={{
+                  marginTop:'-48px'
+                }}
               >
                 <FeaturesTabItem featureTab={feature} />
               </div>

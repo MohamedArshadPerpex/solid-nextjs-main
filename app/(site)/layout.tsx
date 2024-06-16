@@ -28,7 +28,6 @@ export default function RootLayout({
           <Header />
           <ToasterContext />
           {children}
-          <Footer />
           <ScrollToTop />
         </ThemeProvider>
       </body>
