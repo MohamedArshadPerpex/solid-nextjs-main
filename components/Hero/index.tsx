@@ -8,8 +8,16 @@ const Hero = () => {
   const [counter, setCounter] = useState(0);
   const [email, setEmail] = useState("");
   const [loadingComplete, setLoadingComplete] = useState(false);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const followRef = useRef(null);
   const progressBarRef = useRef(null);
+
+  // Array of text options to rotate
+  const textOptions = [
+    "A Corporate Training?",
+    "A SalesTeam?",
+    "50,000 Salary?"
+  ];
 
   useEffect(() => {
     const count = setInterval(() => {
@@ -31,6 +39,14 @@ const Hero = () => {
       reveal();
     }
   }, [counter]);
+
+  useEffect(() => {
+    const textRotationInterval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % textOptions.length);
+    }, 2000); // Rotate every 2 seconds
+
+    return () => clearInterval(textRotationInterval);
+  }, []);
 
   const reveal = () => {
     const t1 = gsap.timeline({
@@ -93,18 +109,14 @@ const Hero = () => {
           width: '100%'
         }}>
           <div className="md:w-1/2">
-            <h4 className="mb-4.5 text-lg font-medium">
-              A Corporate Training?
-            </h4>
-            <h1 className="mb-5 pr-16 text-3xl font-bold xl:text-5xl">
+            <h1 className="mb-5 pr-16 text-3xl font-bold xl:text-5xl" style={{
+              width: ' 1003px'
+            }}>
               Are You Looking For {" "}
-              <span className="relative before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                A SalesTeam?
+              <span className="relative before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark text-blue-500">
+                {textOptions[currentTextIndex]}
               </span>
             </h1>
-            <h4 className="mb-4.5 text-lg font-medium">
-              5000 Salary?
-            </h4>
             <div className="mt-10">
               <form className="flex flex-wrap gap-5" onSubmit={handleSubmit}>
                 <input
@@ -128,7 +140,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="animate_right hidden md:w-1/2 lg:block">
+          {/* <div className="animate_right hidden md:w-1/2 lg:block">
             <div className="relative 2xl:-mr-7.5">
               <video
                 muted
@@ -139,7 +151,7 @@ const Hero = () => {
                 height="auto"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

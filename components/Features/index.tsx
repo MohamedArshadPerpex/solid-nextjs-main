@@ -1,36 +1,78 @@
 "use client";
-import React from "react";
-import featuresData from "./featuresData";
-import SingleFeature from "./SingleFeature";
+import React, { useEffect, useState } from "react";
 import SectionHeader from "../Common/SectionHeader";
+import Description from "../About/Description";
+import Image from "next/image";
+import { images } from "../About/constant";
 
 const Feature = () => {
+  const [activeImage, setActiveImage] = useState(0);
+
+  const clickNext = () => {
+    activeImage === images.length - 1
+      ? setActiveImage(0)
+      : setActiveImage(activeImage + 1);
+  };
+  const clickPrev = () => {
+    activeImage === 0
+      ? setActiveImage(images.length - 1)
+      : setActiveImage(activeImage - 1);
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      clickNext();
+    }, 5000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [activeImage]);
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
       <section id="features" className="py-20 lg:py-25 xl:py-30" style={{
-        marginTop:'-53px'
+        marginTop:'-70px'
       }}>
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-          {/* <!-- Section Title Start --> */}
-          <SectionHeader
-            headerInfo={{
-              title: "",
-              subtitle: "Welcome To Perpex",
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.`,
-            }}
-          />
+          
           {/* <!-- Section Title End --> */}
 
-          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
-            {/* <!-- Features item Start --> */}
-
-            {featuresData.map((feature, key) => (
-              <SingleFeature feature={feature} key={key} />
-            ))}
-            {/* <!-- Features item End --> */}
+          <div style={{
+            marginTop:'-73px'
+          }}>
+          <main className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl"
+    style={{
+      marginTop:'114px'
+    }}
+    >
+      <div
+        className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
+      >
+        {images.map((elem, idx) => (
+          <div
+            key={idx}
+            className={`${
+              idx === activeImage
+                ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out"
+                : "hidden"
+            }`}
+          >
+            <Image
+              src={elem.src}
+              alt=""
+              width={400}
+              height={400}
+              className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
+            />
+          </div>
+        ))}
+      </div>
+      <Description
+        activeImage={activeImage}
+        clickNext={clickNext}
+        clickPrev={clickPrev}
+      />
+    </main>
           </div>
         </div>
       </section>
