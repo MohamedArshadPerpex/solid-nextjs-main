@@ -15,6 +15,7 @@ import Cursor from "../../components/Cursor";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import ImageSlider from '../../components/imageSlider/ImageSlider' 
 
 export default function Home() {
   const sectionRef = useRef(null);
@@ -52,8 +53,11 @@ export default function Home() {
             <Brands />
           </div>
           <div className="flex-none w-screen h-screen">
-            <Feature />
+            <ImageSlider />
           </div>
+          {/* <div className="flex-none w-screen h-screen">
+            <Feature />
+          </div> */}
           <div className="flex-none w-screen h-screen">
             <FeaturesTab />
           </div>

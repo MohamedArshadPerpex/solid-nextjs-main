@@ -5,6 +5,7 @@ import FeaturesTabItem from "./FeaturesTabItem";
 import featuresTabData from "./featuresTabData";
 
 import { motion } from "framer-motion";
+import ImageSlider from "../imageSlider/ImageSlider";
 
 const FeaturesTab = () => {
   const [currentTab, setCurrentTab] = useState("tabOne");
@@ -117,18 +118,11 @@ const FeaturesTab = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
             className="animate_top mx-auto max-w-c-1154"
+            style={{
+              marginTop: '-139px;'
+            }}
           >
-            {featuresTabData.map((feature, key) => (
-              <div
-                className={feature.id === currentTab ? "block" : "hidden"}
-                key={key}
-                style={{
-                  marginTop:'-48px'
-                }}
-              >
-                <FeaturesTabItem featureTab={feature} />
-              </div>
-            ))}
+             <ImageSlider />
                        <a
                 href="#"
                 className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
