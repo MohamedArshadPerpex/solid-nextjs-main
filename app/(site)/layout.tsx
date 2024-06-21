@@ -10,6 +10,7 @@ import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 import ToasterContext from "../context/ToastContext";
+import Cursor from "@/components/Cursor";
 
 export default function RootLayout({
   children,
@@ -25,6 +26,7 @@ export default function RootLayout({
           defaultTheme="light"
         >
           <Lines />
+          <Cursor />
           <Header />
           <ToasterContext />
           {children}

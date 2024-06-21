@@ -16,7 +16,7 @@ const Cursor = () => {
         const onMouseEnterText = (event) => {
             const hoveredText = event.target.textContent.trim(); // Get text content and trim whitespace
             cursor.textContent = hoveredText; // Set cursor text content
-            gsap.to(cursor, { scale: 2, });
+            gsap.to(cursor, { scale: 2, backgroundColor:'black' });
             gsap.to(cursor, { width: 'auto', height: 'auto', duration: 0.1 }); // Adjust duration as needed
         };
 
@@ -52,7 +52,7 @@ const Cursor = () => {
                     left: 0,
                     width: '10px',
                     height: '10px',
-                    backgroundColor: 'blue', // Initial background color
+                    backgroundColor: 'black', // Initial background color
                     borderRadius: '50%', // Circular cursor
                     pointerEvents: 'none',
                     zIndex: 1000,
