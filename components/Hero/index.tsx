@@ -1,16 +1,11 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.css";
-import Image from "next/image";
 import { gsap, Expo } from "gsap";
 
 const Hero = () => {
-  const [counter, setCounter] = useState(0);
   const [email, setEmail] = useState("");
-  const [loadingComplete, setLoadingComplete] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const followRef = useRef(null);
-  const progressBarRef = useRef(null);
 
   // Array of text options to rotate
   const textOptions = [
@@ -20,65 +15,13 @@ const Hero = () => {
   ];
 
   useEffect(() => {
-    const count = setInterval(() => {
-      setCounter((prevCounter) => {
-        if (prevCounter < 100) {
-          return prevCounter + 1;
-        } else {
-          clearInterval(count);
-          return 100;
-        }
-      });
-    }, 25);
-
-    return () => clearInterval(count);
-  }, []);
-
-  useEffect(() => {
-    if (counter === 100) {
-      reveal();
-    }
-  }, [counter]);
-
-  useEffect(() => {
-    const textRotationInterval = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % textOptions.length);
-    }, 2000); // Rotate every 2 seconds
+    }, 2000); 
 
-    return () => clearInterval(textRotationInterval);
+    return () => clearInterval(interval); 
   }, []);
 
-  const reveal = () => {
-    const t1 = gsap.timeline({
-      onComplete: () => {
-        setLoadingComplete(true);
-        console.log("Animation completed");
-      },
-    });
-
-    t1.to(followRef.current, {
-      width: "105%",
-      ease: Expo.easeInOut,
-      duration: 1.2,
-      delay: 0.7,
-    })
-      .to(".Loading .hide", { opacity: 0, duration: 0.3 })
-      .to(".Loading .hide", { display: "none", duration: 0.3 })
-      .to(followRef.current, {
-        height: "100%",
-        ease: Expo.easeInOut,
-        duration: 0.7,
-        delay: 0.5,
-      })
-      .to(".Content", { width: "100%", ease: Expo.easeInOut, duration: 0.7 })
-      .to(".Title", { display: "block", duration: 0.1 })
-      .to(".Title", {
-        opacity: 1,
-        stagger: 0.15,
-        ease: Expo.easeInOut,
-        duration: 0.6,
-      });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -90,20 +33,8 @@ const Hero = () => {
 
   return (
     <div className="AppContainer">
-      {!loadingComplete && (
-        <div className="Loading">
-          <div className="Follow" ref={followRef}></div>
-          <div
-            className="ProgressBar"
-            style={{ width: `${counter}%` }}
-            ref={progressBarRef}
-          ></div>
-          <p className="Count">{counter}%</p>
-        </div>
-      )}
-
       {/* Content Section */}
-      <div className={`mx-auto max-w-7xl px-4 md:px-8 2xl:px-0 Content ${loadingComplete ? 'show' : ''}`}>
+      <div className={`mx-auto max-w-7xl px-4 md:px-8 2xl:px-0 Content`}>
         <div className="flex lg:items-center lg:gap-8 xl:gap-32.5" style={{
           marginLeft: '100px',
           width: '100%'
@@ -139,19 +70,6 @@ const Hero = () => {
               </p>
             </div>
           </div>
-
-          {/* <div className="animate_right hidden md:w-1/2 lg:block">
-            <div className="relative 2xl:-mr-7.5">
-              <video
-                muted
-                autoPlay
-                className="shadow-solid-l"
-                src="/images/hero/hero-light.mp4" // Replace with your video URL
-                width="100%"
-                height="auto"
-              />
-            </div>
-          </div> */}
         </div>
       </div>
     </div>
