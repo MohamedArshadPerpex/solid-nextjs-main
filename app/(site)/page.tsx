@@ -24,7 +24,7 @@ export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    const sectionsCount = 13; // Adjust based on the number of sections
+    const sectionsCount = 11; // Adjust based on the number of sections
     const pin = gsap.to(sectionRef.current, {
       x: () => `-${(sectionsCount - 1) * 100}vw`,
       ease: "none",
@@ -67,9 +67,9 @@ export default function Home() {
           {/* <div className="flex-none w-screen h-screen">
             <CTA />
           </div> */}
-          <div className="flex-none w-screen h-screen">
+          {/* <div className="flex-none w-screen h-screen">
             <FAQ />
-          </div>
+          </div> */}
           <div className="flex-none w-screen h-screen">
             <Contact />
           </div>
