@@ -33,6 +33,7 @@ const Hero = () => {
 
   return (
     <div className="AppContainer">
+      
       {/* Content Section */}
       <div className={`mx-auto max-w-7xl px-4 md:px-8 2xl:px-0 Content`}>
         <div className="flex lg:items-center lg:gap-8 xl:gap-32.5" style={{
@@ -40,9 +41,7 @@ const Hero = () => {
           width: '100%'
         }}>
           <div className="md:w-1/2">
-            <h1 className="mb-5 pr-16 text-3xl font-bold xl:text-5xl" style={{
-              width: ' 1003px'
-            }}>
+            <h1 className="mb-5 pr-16 text-3xl font-bold xl:text-5xl">
               Are You Looking For {" "}
               <span className="relative before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark text-blue-500">
                 {textOptions[currentTextIndex]}

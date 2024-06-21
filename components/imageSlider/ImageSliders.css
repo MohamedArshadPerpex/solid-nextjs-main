@@ -67,6 +67,8 @@
   transition: transform 0.5s ease-in-out;
   transform-style: preserve-3d;
   transform-origin: center;
+  margin-top: 11px;
+
 }
 
 .swiper-slide:hover .slide-content {

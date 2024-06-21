@@ -56,6 +56,7 @@
   width: 37rem;
   height: 42rem;
   position: relative;
+  margin-top: 11px;
 }
 
 @media (max-width: 500px) {

@@ -6,7 +6,7 @@ import gsap from 'gsap';
 const Cursor = () => {
     useEffect(() => {
         const cursor = document.getElementById('custom-cursor');
-        const textElements = document.querySelectorAll('span, h1, h2, h3, h4'); // Adjust selectors as needed
+        const textElements = document.querySelectorAll('span, h1, h2, h3, h4 ,h5 ,h6 , p , a , button'); // Adjust selectors as needed
 
         const onMouseMove = (event) => {
             const { clientX, clientY } = event;
