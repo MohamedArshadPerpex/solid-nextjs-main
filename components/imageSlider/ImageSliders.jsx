@@ -1,10 +1,9 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Navigation, Pagination } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
 
 import './ImageSliders.css';
@@ -35,7 +34,7 @@ const ImageSliders = () => {
             >
                 <SwiperSlide>
                     <div className="slide-content">
-                        <img src="/images/about/campus.jpg" alt="slide_image" />
+                        <img src="/images/about/upskill01.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="">
@@ -48,7 +47,7 @@ const ImageSliders = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="slide-content">
-                        <img src="/images/about/campus01.jpg" alt="slide_image" />
+                        <img src="/images/about/upskill02.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="">
@@ -61,7 +60,7 @@ const ImageSliders = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="slide-content">
-                        <img src="/images/about/campus02.jpg" alt="slide_image" />
+                        <img src="/images/about/upskill03.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="">
@@ -74,7 +73,7 @@ const ImageSliders = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="slide-content">
-                        <img src="/images/about/campus01.jpg" alt="slide_image" />
+                        <img src="/images/about/upskill04.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="">

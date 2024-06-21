@@ -3,13 +3,15 @@ import { motion } from 'framer-motion';
 import ImageSliders from '../imageSlider/ImageSliders';
 import Image from 'next/image';
 import Corporate from '../imageSlider/Corporate';
+import './Feature.css'
 
 const FeaturesTab = () => {
-  const [currentTab, setCurrentTab] = useState('tabOne');
+  const [currentTab, setCurrentTab] = useState('');
 
   const handleTabClick = (tab) => {
     setCurrentTab(tab);
-  };
+  }; 
+
 
   return (
     <>

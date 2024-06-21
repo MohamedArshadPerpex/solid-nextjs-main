@@ -47,7 +47,7 @@ export default function Home() {
         <div ref={sectionRef} className="flex w-[900vw]"> {/* Adjusted for 9 sections */}
           <div className="flex-none w-screen h-screen">
             <Hero />
-            <Cursor />
+            
           </div>
           <div className="flex-none w-screen h-screen">
             <Brands />
