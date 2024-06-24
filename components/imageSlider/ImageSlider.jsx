@@ -32,28 +32,61 @@ const ImageSlider = () => {
                 modules={[EffectCoverflow, Pagination, Navigation]}
                 className="swiper_container"
             >
-                <SwiperSlide>
+                <SwiperSlide style={{
+                    width:'400px'
+                }}>
                     <img src="/images/about/campus.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide  style={{
+                    width:'400px'
+                }}>
                     <img src="/images/about/campus01.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide  style={{
+                    width:'400px'
+                }}>
                     <img src="/images/about/campus02.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide  style={{
+                    width:'400px'
+                }}>
                     <img src="/images/about/campus01.jpg" alt="slide_image" />  
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide  style={{
+                    width:'400px'
+                }}>
                     <img src="/images/about/campus02.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide  style={{
+                    width:'400px'
+                }}>
                     <img src="/images/about/campus03.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide  style={{
+                    width:'400px'
+                }}>
                     <img src="/images/about/campus04.jpg" alt="slide_image" />
                 </SwiperSlide>
-                
+                <SwiperSlide  style={{
+                    width:'400px'
+                }}>
+                    <img src="/images/about/upskill01.jpg" alt="slide_image" />
+                </SwiperSlide>
+                <SwiperSlide  style={{
+                    width:'400px'
+                }}>
+                    <img src="/images/about/upskill02.jpg" alt="slide_image" />
+                </SwiperSlide>
+                <SwiperSlide  style={{
+                    width:'400px'
+                }}>
+                    <img src="/images/about/upskill03.jpg" alt="slide_image" />
+                </SwiperSlide>
+                <SwiperSlide  style={{
+                    width:'400px'
+                }}>
+                    <img src="/images/about/upskill04.jpg" alt="slide_image" />
+                </SwiperSlide>
                 <div className="slider-controller">
                     <div className="swiper-button-prev slider-arrow">
                         <IoIosArrowDropleftCircle />

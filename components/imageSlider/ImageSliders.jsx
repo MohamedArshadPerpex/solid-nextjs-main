@@ -7,6 +7,7 @@ import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
 
 import './ImageSliders.css';
+import Link from 'next/link';
 
 const ImageSliders = () => {
     return (
@@ -37,11 +38,11 @@ const ImageSliders = () => {
                         <img src="/images/about/upskill01.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="">
+                            <Link href="/support">
                                 <button className="bg-[#ecae7e] text-white uppercase px-4 py-2 rounded-md my-10">
                                     Enquiry Now
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -50,11 +51,11 @@ const ImageSliders = () => {
                         <img src="/images/about/upskill02.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="">
+                            <Link href="/support">
                                 <button className="bg-[#ecae7e] text-white uppercase px-4 py-2 rounded-md my-10">
                                     Enquiry Now
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -63,11 +64,11 @@ const ImageSliders = () => {
                         <img src="/images/about/upskill03.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="">
+                            <Link href="/support">
                                 <button className="bg-[#ecae7e] text-white uppercase px-4 py-2 rounded-md my-10">
                                     Enquiry Now
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -76,11 +77,11 @@ const ImageSliders = () => {
                         <img src="/images/about/upskill04.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="">
+                            <Link href="/support">
                                 <button className="bg-[#ecae7e] text-white uppercase px-4 py-2 rounded-md my-10">
                                     Enquiry Now
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -89,11 +90,11 @@ const ImageSliders = () => {
                         <img src="/images/about/campus02.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="">
+                            <Link href="/support">
                                 <button className="bg-[#ecae7e] text-white uppercase px-4 py-2 rounded-md my-10">
                                     Enquiry Now
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -102,11 +103,11 @@ const ImageSliders = () => {
                         <img src="/images/about/campus03.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="">
+                            <Link href="/support">
                                 <button className="bg-[#ecae7e] text-white uppercase px-4 py-2 rounded-md my-10">
                                     Enquiry Now
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -115,11 +116,11 @@ const ImageSliders = () => {
                         <img src="/images/about/campus04.jpg" alt="slide_image" />
                         <div className="overlay">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="">
+                            <Link href="/support">
                                 <button className="bg-[#ecae7e] text-white uppercase px-4 py-2 rounded-md my-10">
                                     Enquiry Now
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>
