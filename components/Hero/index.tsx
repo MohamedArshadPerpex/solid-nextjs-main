@@ -9,9 +9,13 @@ const Hero = () => {
 
   // Array of text options to rotate
   const textOptions = [
-    "A Corporate Training?",
-    "A SalesTeam?",
-    "50,000 Salary?"
+    "staffing Solution?",
+    "Sales Training?",
+    "50,000+ Salary?",
+    "On The Job Training Program?",
+    "Organic Marketing Strategies?",
+    "Parallel Sales Team?",
+    "Business Development Solutions?",
   ];
 
   useEffect(() => {
