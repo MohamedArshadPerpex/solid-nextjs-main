@@ -1,17 +1,55 @@
-"use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import React from "react";
+import React, { useState } from 'react';
+import axios from 'axios';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Contact = () => {
-  /**
-   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
-   * Reason: To fix rehydration error
-   */
-  const [hasMounted, setHasMounted] = React.useState(false);
+  const [fullname, setFullname] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
+
   React.useEffect(() => {
     setHasMounted(true);
   }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    const formData = {
+      fullname,
+      email,
+      subject,
+      phone,
+      message
+    };
+
+    try {
+      const response = await axios.post('https://sheet.best/api/sheets/a5efb62f-3d4a-4f0d-9a08-a61bdd070303', formData);
+
+      if (response.status === 200) {
+        alert('Message sent successfully!');
+        // Optionally clear form fields after successful submission
+        setFullname('');
+        setEmail('');
+        setSubject('');
+        setPhone('');
+        setMessage('');
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Failed to send message. Please try again later.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   if (!hasMounted) {
     return null;
   }
@@ -24,13 +62,13 @@ const Contact = () => {
           <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
           <div className="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
             <Image
-              src="./images/shape/shape-dotted-light.svg"
+              src="/images/shape/shape-dotted-light.svg"
               alt="Dotted"
               className="dark:hidden"
               fill
             />
             <Image
-              src="./images/shape/shape-dotted-dark.svg"
+              src="/images/shape/shape-dotted-dark.svg"
               alt="Dotted"
               className="hidden dark:block"
               fill
@@ -44,7 +82,6 @@ const Contact = () => {
                   opacity: 0,
                   y: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   y: 0,
@@ -60,52 +97,71 @@ const Contact = () => {
                 Send a message
               </h2>
 
-              <form
-                action="https://formbold.com/s/unique_form_id"
-                method="POST"
-              >
+              <form onSubmit={handleSubmit}>
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
+                    name="fullname"
                     placeholder="Full name"
+                    value={fullname}
+                    onChange={(e) => setFullname(e.target.value)}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
 
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
                 </div>
 
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
+                    name="subject"
                     placeholder="Subject"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
 
                   <input
                     type="text"
+                    name="phone"
                     placeholder="Phone number"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
                 </div>
 
                 <div className="mb-11.5 flex">
                   <textarea
+                    name="message"
                     placeholder="Message"
                     rows={4}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                    required
                   ></textarea>
                 </div>
 
                 <div className="flex justify-center">
                   <button
+                    type="submit"
                     aria-label="send message"
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
+                    disabled={submitting}
                   >
-                    Send Message
+                    {submitting ? 'Sending...' : 'Send Message'}
                     <svg
                       className="fill-white"
                       width="14"
@@ -130,7 +186,6 @@ const Contact = () => {
                   opacity: 0,
                   y: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   y: 0,
@@ -157,7 +212,7 @@ const Contact = () => {
                   Email Address
                 </h3>
                 <p>
-                  <a href="#">yourmail@domainname.com</a>
+                  <a href="mailto:yourmail@domainname.com">yourmail@domainname.com</a>
                 </p>
               </div>
               <div>
@@ -165,7 +220,7 @@ const Contact = () => {
                   Phone Number
                 </h4>
                 <p>
-                  <a href="#">+009 42334 6343 843</a>
+                  <a href="tel:+009423346343843">+009 42334 6343 843</a>
                 </p>
               </div>
             </motion.div>
