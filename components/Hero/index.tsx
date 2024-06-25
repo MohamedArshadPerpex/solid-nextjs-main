@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./Hero.css";
 import { gsap, Expo } from "gsap";
+import Link from "next/link";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -60,17 +61,15 @@ const Hero = () => {
                   placeholder="Enter your email address"
                   className="rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
                 />
+                <Link href='' >
                 <button
                   aria-label="get started button"
                   className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration:300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
                 >
                   Get Started
                 </button>
+                </Link>
               </form>
-
-              <p className="mt-5 text-base">
-                Try for free no credit card required.
-              </p>
             </div>
           </div>
         </div>
