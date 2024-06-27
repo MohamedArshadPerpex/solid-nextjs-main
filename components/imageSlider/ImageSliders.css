@@ -79,7 +79,7 @@
 .swiper-slide .slide-content img,
 .swiper-slide .slide-content .overlay {
   width: 92%;
-  height: 64%;
+  height: 51%;
   border-radius: 1rem;
   backface-visibility: hidden;
   position: absolute;
@@ -154,10 +154,11 @@
 }
 
 .slider-controller .slider-arrow {
-    margin-top: -113px;
- 
+    margin-top: -174px;
 }
-
+.overlay{
+  background-color: black;
+}
 .slider-controller .slider-arrow svg {
   font-size: 2rem;
   color: #222224;
