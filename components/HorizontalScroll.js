@@ -7,9 +7,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import FeaturesTab from '../components/FeaturesTab/index'
 import FAQ from '../components/FAQ/index'
-import Contact from '../components/Contact/index'
 import Footer from '../components/Footer/index'
 import Brands from "./Brands";
+import Contact from '../components/Contact/index'
 
 export default function HorizontalScroll() {
   const sectionRef = useRef(null);
