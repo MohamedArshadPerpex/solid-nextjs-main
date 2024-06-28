@@ -73,7 +73,7 @@ const Corporate = () => {
 
   return (
     <div className="container">
-        Job Ready Programme
+        Business Solutions
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
