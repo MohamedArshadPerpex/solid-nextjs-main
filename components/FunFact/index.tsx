@@ -57,19 +57,13 @@ const FunFact = () => {
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
-            style={{
-              marginLeft: '327px'
-            }}
+           
           >
             <h2 className="mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3" style={{ marginTop: '18px' }}>
               Our Client Collaboration Network
             </h2>
             {/* Example paragraph or text */}
-            <p className="text-base text-gray-600 dark:text-gray-400" style={{
-                  width: '453px',
-                  marginLeft: '-151px;'
-              
-            }}>
+            <p className="text-base text-gray-600 dark:text-gray-400">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
               dolor sit amet lorem bibendum laoreet. Nulla facilisi. Suspendisse
               potenti.
