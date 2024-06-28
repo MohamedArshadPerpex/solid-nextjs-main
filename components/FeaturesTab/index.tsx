@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, RefObject } from 'react';
 import { motion } from 'framer-motion';
 import ImageSliders from '../imageSlider/ImageSliders';
 import Image from 'next/image';
@@ -16,6 +16,7 @@ const FeaturesTab = () => {
 
   const closePopup = () => {
     setCurrentTab('');
+    // Ensure sectionRef.current is not null before accessing it
     if (sectionRef.current) {
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
