@@ -12,6 +12,8 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
+  const [emailError, setEmailError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
 
   React.useEffect(() => {
     setHasMounted(true);
@@ -55,6 +57,37 @@ const Contact = () => {
     return null;
   }
 
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
+
+  const handleEmailChange = (e) => {
+    const { value } = e.target;
+    setEmail(value);
+
+    if (!validateEmail(value)) {
+      setEmailError('Please enter a valid email address.');
+    } else {
+      setEmailError('');
+    }
+  };
+
+  const validatePhone = (phone) => {
+    const regex = /^\d{10}$/;
+    return regex.test(phone);
+  };
+
+  const handlePhoneChange = (e) => {
+    const { value } = e.target;
+    setPhone(value);
+
+    if (!validatePhone(value)) {
+      setPhoneError('Please enter a valid 10-digit phone number.');
+    } else {
+      setPhoneError('');
+    }
+  };
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
@@ -94,7 +127,9 @@ const Contact = () => {
               viewport={{ once: true }}
               className="animate_top w-full rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black md:w-2/3 lg:w-3/4 xl:p-15"
             >
-              <h2 className="mb-15 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
+              <h2 className="mb-15 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2" style={{
+                marginTop:'-38px'
+              }}>
                 Send a message
               </h2>
 
@@ -115,12 +150,17 @@ const Contact = () => {
                     name="email"
                     placeholder="Email address"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    onChange={handleEmailChange}
+                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                     required
                   />
-                </div>
 
+                </div>
+                {emailError && <p className="text-red-500" style={{
+                  marginLeft: '272px',
+                  marginTop: '-22px',
+                  height: '46px'
+                }}>{emailError}</p>}
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
@@ -137,12 +177,16 @@ const Contact = () => {
                     name="phone"
                     placeholder="Phone number"
                     value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    onChange={handlePhoneChange}
+                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                     required
                   />
                 </div>
-
+                {phoneError && <p className="text-red-500" style={{
+                    marginLeft: '272px',
+                    marginTop: '-22px',
+                    height: '46px'
+                  }}>{phoneError}</p>}
                 <div className="mb-11.5 flex">
                   <textarea
                     name="message"
@@ -198,7 +242,9 @@ const Contact = () => {
               viewport={{ once: true }}
               className="animate_top w-full md:w-1/3 md:p-7.5 lg:w-[26%] xl:pt-15"
             >
-              <h2 className="mb-12.5 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
+              <h2 className="mb-12.5 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2" style={{
+                marginTop:'-38px'
+              }}>
                 Find us
               </h2>
 

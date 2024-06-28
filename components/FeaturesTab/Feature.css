@@ -36,3 +36,11 @@
 .Heading{
   height: 40px;
 }
+.close-popups {
+  position: absolute;
+  top: 3rem;
+  right: 8rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #555;
+}

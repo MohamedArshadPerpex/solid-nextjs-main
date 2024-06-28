@@ -1,0 +1,122 @@
+/* General styles for vertical carousels */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .wrapper img {
+    width: 100px;
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow color and intensity */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 20px;
+  }
+  
+  .wrapper img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  
+  .wrapper > * {
+    flex: 1 1 auto;
+  }
+  
+  /* 1st Vertical Carousel (left-hand side) */
+  .carouselverticalone {
+    animation: looping1 25s linear infinite;
+  }
+  
+  .verticalcolumnone {
+    margin-left: 1100px;
+    max-height: 600px;
+    height: 600px;
+    width: 150px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
+  }
+  
+  @keyframes looping1 {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  @media only screen and (max-width: 360px) {
+    .verticalcolumnone {
+      max-height: 300px;
+      height: 300px;
+      width: 100px;
+    }
+  }
+  
+  /* 2nd Vertical Carousel (right-hand side) */
+  .carouselverticaltwo {
+    animation: looping2 25s linear infinite reverse;
+  }
+  
+  .verticalcolumntwo {
+    margin-left: 860px;
+    margin-top: 10px;
+    max-height: 550px;
+    height: 550px;
+    width: 150px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
+  }
+  
+  @keyframes looping2 {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  @media only screen and (max-width: 360px) {
+    .verticalcolumntwo {
+      max-height: 300px;
+      height: 300px;
+      width: 100px;
+    }
+  }
+
+  .carouselverticalthree {
+    animation: looping3 25s linear infinite;
+  }
+  
+  .verticalcolumnthree {
+    margin-left: 630px;
+    max-height: 600px;
+    height: 600px;
+    width: 150px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
+  }
+  
+  @keyframes looping3 {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  @media only screen and (max-width: 360px) {
+    .verticalcolumnthree {
+      max-height: 300px;
+      height: 300px;
+      width: 100px;
+    }
+  }
+  

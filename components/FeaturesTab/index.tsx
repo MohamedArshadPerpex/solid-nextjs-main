@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import ImageSliders from '../imageSlider/ImageSliders';
 import Image from 'next/image';
@@ -7,14 +7,23 @@ import './Feature.css';
 
 const FeaturesTab = () => {
   const [currentTab, setCurrentTab] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
+  const sectionRef = useRef(null);
 
   const handleTabClick = (tab) => {
     setCurrentTab(tab);
   };
 
+  const closePopup = () => {
+    setCurrentTab('');
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <>
-      <section className="relative pb-20 pt-18.5 lg:pb-22.5">
+      <section className="relative pb-20 pt-18.5 lg:pb-22.5" ref={sectionRef}>
         <div className="relative mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0" style={{ marginTop: '169px' }}>
           <div className="absolute -top-16 -z-1 mx-auto h-[350px] w-[90%]">
             <h1 className="Heading">so why are you here?</h1>
@@ -83,6 +92,9 @@ const FeaturesTab = () => {
             >
               {currentTab === 'tabOne' && (
                 <div>
+                  <span className="close-popups" onClick={closePopup}>
+                    &times;
+                  </span>
                   <ImageSliders />
                   <a
                     href="#"
@@ -101,6 +113,9 @@ const FeaturesTab = () => {
 
               {currentTab === 'tabTwo' && (
                 <div>
+                  <span className="close-popups" onClick={closePopup}>
+                    &times;
+                  </span>
                   <Corporate />
                   <a
                     href="#"

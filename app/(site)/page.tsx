@@ -61,9 +61,9 @@ export default function Home() {
           <div className="flex-none w-screen h-screen">
             <FeaturesTab />
           </div>
-          {/* <div className="flex-none w-screen h-screen">
+          <div className="flex-none w-screen h-screen">
             <FunFact />
-          </div> */}
+          </div>
           {/* <div className="flex-none w-screen h-screen">
             <CTA />
           </div> */}

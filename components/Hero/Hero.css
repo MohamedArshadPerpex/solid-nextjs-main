@@ -4,27 +4,32 @@
   height: 100vh;
   color: #000000;
   position: relative;
-  margin-left: 0px;
-  width: 98vw;
-  height: 100vh;
-  color: #000000;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 @media (max-width: 392px) {
   .AppContainer {
     margin-top: 40px;
   }
 }
 
+/* Loading text styles */
+.LoadingContainer {
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
 /* Content styles */
 .Content {
-  height: 100%;
   width: 100%; /* Changed to 100% */
-  position: absolute;
-  left: 20px;
-  top: 0;
   padding: auto;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,10 +37,56 @@
   color: #fff;
   flex-direction: column;
 }
+
 @media (min-width: 1280px) {
   .xl\:text-5xl {
       width: 920px;
       font-size: 3rem;
       line-height: 1;
   }
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+  margin-top: 300px;
+  position: relative;
+  color: rgba(0, 0, 0, .3);
+  font-size: 40px;
+}
+h2:before {
+  height: 65px;
+  content: attr(data-text);
+  position: absolute;
+  overflow: hidden;
+  max-width: 16em;
+  white-space: nowrap;
+  color: #fff;
+  animation: loading 6s linear;
+}
+@keyframes loading {
+  0% {
+      max-width: 0;
+  }
+}
+.BackgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure video is behind other content */
+}
+
+/* Loading Overlay */
+.LoadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Place overlay below loading text */
 }

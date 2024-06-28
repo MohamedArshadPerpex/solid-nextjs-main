@@ -28,8 +28,8 @@ export default function RootLayout({
         >
           <Lines />
           <Backround />
-          <Cursor />
           <Header />
+          <Cursor />
           <ToasterContext />
           {children}
           <ScrollToTop />
