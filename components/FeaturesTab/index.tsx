@@ -6,11 +6,11 @@ import Corporate from '../imageSlider/Corporate';
 import './Feature.css';
 
 const FeaturesTab = () => {
-  const [currentTab, setCurrentTab] = useState('');
-  const [showPopup, setShowPopup] = useState(false);
-  const sectionRef = useRef(null);
+  const [currentTab, setCurrentTab] = useState<string>(''); // Explicitly set type to string
+  const [showPopup, setShowPopup] = useState<boolean>(false); // Explicitly set type to boolean
+  const sectionRef = useRef<HTMLDivElement>(null); // Specify useRef type as HTMLDivElement
 
-  const handleTabClick = (tab) => {
+  const handleTabClick = (tab: string) => {
     setCurrentTab(tab);
   };
 
@@ -20,7 +20,7 @@ const FeaturesTab = () => {
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  
+
   return (
     <>
       <section className="relative pb-20 pt-18.5 lg:pb-22.5" ref={sectionRef}>
