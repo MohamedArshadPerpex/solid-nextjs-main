@@ -163,7 +163,7 @@ pre {
 }
 body {
   height: 5000px;
-  background: linear-gradient(to bottom rgb(30, 30, 100));
+  background: linear-gradient(to bottom, rgb(30, 30, 100));
 }
 
 h1 {
@@ -210,13 +210,13 @@ h1 {
 
 .loading-container {
   margin-top: 215px;
-  margin-left: 597px;
+  margin-left: 604px;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 210px;
-  height: 210px;
+  width: 183px;
+  height: 183px;
   background-color: white;
   outline: 2px solid darkBlue;
   border-radius: 50%;
@@ -267,10 +267,9 @@ svg.back-wave {
 }
 
 .loading-text {
-  margin-top: 10px;
-  margin-left: 42px;
+  margin-left: 35px;
   font-family: Shantell Sans, sans-serif;
-  font-size: 28px;
+  font-size: 22px;
   line-height: 1.5;
   font-weight: 500;
   color: white;
@@ -308,3 +307,25 @@ svg.back-wave {
 .content-container {
   animation: slide-in 1s cubic-bezier(0.83, 0, 0.17, 1) forwards;
 }
+
+/* @media (min-width: 255px) and (min-width: 322px) {
+  .loading-container {
+      margin-left: 74px;
+      margin-top: 154px;
+
+  }
+  } */
+  @media (min-width: 320px) and (max-width:353px) {
+    .loading-container {
+        margin-left: 74px;
+        margin-top: 154px;
+  
+    }
+    }
+    @media (min-width: 402px) and (max-width:685px) {
+      .loading-container {
+          margin-left: 107px;
+          margin-top: 154px;
+    
+      }
+      }
