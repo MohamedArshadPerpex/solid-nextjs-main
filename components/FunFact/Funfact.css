@@ -185,6 +185,7 @@
     .verticalcolumnone,
     .verticalcolumntwo,
     .verticalcolumnthree {
+      margin-left: 200px;
       width: 90px; /* Further adjust width for very small screens */
     }
   }

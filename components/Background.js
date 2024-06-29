@@ -5,7 +5,7 @@ const Background = () => {
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1984 940" width="1280" height="1280" id="star-svg">
-<path transform="translate(1016,133)" d="m0 0h38l304 6 46 1-2 4-180 180-6 9-99 99 2 4 190 190 6 5 6 7 6 5 6 7 6 5 7 8 16 16 7 6-1 5-106 106-7-6-446-446 6-7 7-8 4-6z" fill="#3761A0"/>
+{/* <path transform="translate(1016,133)" d="m0 0h38l304 6 46 1-2 4-180 180-6 9-99 99 2 4 190 190 6 5 6 7 6 5 6 7 6 5 7 8 16 16 7 6-1 5-106 106-7-6-446-446 6-7 7-8 4-6z" fill="#3761A0"/>
 <path transform="translate(597,158)" d="m0 0 4 1 156 156 7 8 4 5 7 8 275 275-1 5-8 7-197 197h-51l-110-2-204-4-23-1 2-4 285-285-6-7-186-186-6-8-29-29v-2l-4-2v-2l-4-2-4-5-8-7v-2h-2v-2l-4-2v-4l8-7z" fill="#2FC0EF"/>
 <path transform="translate(848,413)" d="m0 0 3 1 7 8 62 62 5 2 125 125-1 5-8 5-5 5h-2v2h-2v2h-2l-2 4h-2l-2 4h-2v2h-2v2h-2v2l-8 7-9 9h-2l-2 4-10 10h-2v2h-2v2h-2v2l-4 4h-2l-2 4h-2l-2 4-29 29h-2l-1 3-5 5-8 6-6 1-5 3-6 8-6 5-1 3h-3v2l-5 3h-2l-2 4-4 5-9 5-8 8h-2l-1-4 2-8 4-5h2v-2h2l2-4h2l2-4h2l2-4 6-7h2l2-4 6-5h2v-2l7-6 3-2 2-5h2l2-13 2-14v-30l1-13 2-9v-83l1-24v-41l-1-4-4-2v-2l-4-2v-2l-4-2v-2l-4-2v-2h-3l-1-4-4-2v-2l-4-2-4-4v-2l-3-1-5-5v-2l-4-2v-2l-4-2v-2l-4-2v-2h-2l-7-8-14-14z" fill="#1FAFE7"/>
 <path transform="translate(936,215)" d="m0 0h1l-1 21v26l1 24v90l-1 74-1 14 1 4-4-1-123-123 6-7 7-8 4-6 105-105z" fill="#2D5292"/>
@@ -32,7 +32,7 @@ const Background = () => {
 <path transform="translate(1128,417)" d="m0 0 3 1-13 13-1-2 5-6h2v-2h2v-2h2z" fill="#5081B4"/>
 <path transform="translate(490,264)" d="m0 0 5 1 2 6-6-2z" fill="#67CBEF"/>
 <path transform="translate(1032,564)" d="m0 0 5 2 3 5-1 3-7-7z" fill="#6A85B2"/>
-<path transform="translate(1030,592)" d="m0 0 7 6 6 7-4-2-8-7z" fill="#53CAF1"/>
+<path transform="translate(1030,592)" d="m0 0 7 6 6 7-4-2-8-7z" fill="#53CAF1"/> */}
     </svg>
   );
 };

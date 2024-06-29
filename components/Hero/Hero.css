@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('../../public//images//hero/3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 392px) {
