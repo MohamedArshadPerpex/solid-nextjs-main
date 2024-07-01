@@ -74,7 +74,7 @@ const FunFact = () => {
           </motion.div>
 
           {/* Vertical carousels */}
-          <div className="content" style={{
+          <div style={{
             marginTop: '-282px',
             marginLeft: '608px',
             width: '599px',
