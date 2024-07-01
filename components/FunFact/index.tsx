@@ -76,7 +76,7 @@ const FunFact = () => {
           {/* Vertical carousels */}
           <div className="content" style={{
             marginTop: '-282px',
-            marginLeft: '662px',
+            marginLeft: '608px',
             width: '599px',
             overflow: 'hidden',
             border: '2px solid #ccc',
