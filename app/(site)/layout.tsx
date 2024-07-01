@@ -26,7 +26,7 @@ export default function RootLayout({
     // Simulate loading completion after 3 seconds (Adjust timing as needed)
     const loadingTimeout = setTimeout(() => {
       setLoadingComplete(true);
-    }, 4000);
+    }, 400000);
 
     // Clean up timeout on component unmount or when loading completes early
     return () => clearTimeout(loadingTimeout);

@@ -210,7 +210,7 @@ h1 {
 
 .loading-container {
   margin-top: 215px;
-  margin-left: 604px;
+  margin-left: 580px;
   display: flex;
   position: relative;
   align-items: center;
@@ -326,7 +326,6 @@ svg.back-wave {
       .loading-container {
           margin-left: 107px;
           margin-top: 154px;
-    
       }
       }
       
