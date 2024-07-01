@@ -1,4 +1,3 @@
-/* AppContainer styles */
 .AppContainer {
   width: 100vw;
   height: 100vh;
@@ -7,9 +6,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../../public//images//hero/HomeScreen.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.HeroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure video is behind other content */
 }
 
 @media (max-width: 392px) {

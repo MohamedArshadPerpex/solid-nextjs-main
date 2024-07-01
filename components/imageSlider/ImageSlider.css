@@ -45,19 +45,40 @@
   text-align: center;
 }
 
-.swiper_container {
+.swiper_containers {
+  margin-top: 75px;
   width: 100%;
   height: 52rem;
   padding: 2rem 0;
   position: relative;
 }
-
-.swiper-slide {
-  width: 37rem;
-  height: 42rem;
+.swiper-slides {
+  width: 32rem;
+  height: 23rem;
   position: relative;
   margin-top: 11px;
+  transition: opacity 0.5s ease, filter 0.5s ease; /* Smooth transition for opacity and filter */
 }
+
+.swiper-slides img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Apply grayscale and lower opacity to non-active slides */
+.swiper-slide:not(.swiper-slide-active) img {
+  filter: grayscale(70%) brightness(80%); /* Adjusted filter for less grayscale and higher brightness */
+  opacity: 0.6; /* Slightly lower opacity */
+}
+
+/* Enhance active slide */
+.swiper-slide.swiper-slide-active img {
+  filter: grayscale(0%) brightness(100%); /* No grayscale and full brightness for active slide */
+  opacity: 1; /* Full opacity */
+}
+
 
 @media (max-width: 500px) {
   .swiper_container {
@@ -75,7 +96,7 @@
 
 .swiper-slide img {
     width: 32rem;
-    height: 28rem;
+    height: 23rem;
     border-radius: 1rem;
     object-fit: cover;
 
@@ -146,3 +167,4 @@
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
 }
+

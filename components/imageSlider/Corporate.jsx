@@ -101,7 +101,7 @@ const Corporate = () => {
             <div className="slide-content">
               <img src={slide.image} alt={`slide_image_${index}`} />
               <div className={`overlay ${index === activeIndex ? 'active' : ''}`} onClick={() => handlePopup(slide.description)}>
-                <p>{slide.description}</p>
+              <p>Show Details</p>
               </div>
               <Link href="/support">
                 <button className="enquiry-button">

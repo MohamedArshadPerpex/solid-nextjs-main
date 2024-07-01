@@ -14,31 +14,31 @@ const ImageSliders = () => {
     {
       image: '/images/about/development.jpg',
       description:
-        'PerpeX streamlines your recruitment process, helping you meet staffing needs efficiently. Our solution utilizes automation to identify top talent, optimize candidate interactions, and land the perfect fit for your open positions. We guide candidates seamlessly through the application process, ensuring a positive experience and faster hiring times.',
+        'Learn from seasoned professionals in sales, entrepreneurship, and business management through engaging sessions offering insights and practical wisdom for success in the field.',
         heading:'Funtamentals of Business Development'
     },
     {
       image: '/images/about/placement.jpg',
       description:
-        'PerpeX empowers you to switch to organic marketing, a strategic approach for attracting customers naturally. We guide you in developing compelling content, fostering brand loyalty, and building a thriving online presence. Our data-driven strategies help you identify target audiences, optimize content for search engines, and cultivate long-term customer engagement.',
+        'Collaborate with peers to share experiences, insights, and best practices, fostering a dynamic learning environment where collective knowledge enhances individual growth.',
          heading:'Outbound Training for Immediate Placement'
     },
     {
       image: '/images/about/Ent.jpg',
       description:
-        'PerpeX equips your sales team with the skills and knowledge they need to excel. Our data-driven training programs combine proven strategies with practical application to boost individual and team performance. We customize programs to your specific industry and sales goals, ensuring your team is equipped to navigate the modern sales landscape.',
+        'Master sales techniques, client management, and lead generation strategies through expert-led sessions and immersive practical exercises, equipping you with the skills needed for effective salesmanship.',
          heading:'Business Development and Entrepreneurship'
     },
     {
       image: '/images/about/startup.png',
       description:
-        'Stop Wasting Resources on Unqualified Leads! PerpeX unveils strategies to dramatically reduce your Customer Acquisition Cost (CAC). Discover how to leverage a winning combination of Customer Relationship Management (CRM) and Interactive Voice Response (IVR) systems to effectively manage your leads and convert them into loyal customers.',
+        'Experience practical application of theories with interactive modules covering sales, communication, project management, and financial planning, ensuring hands-on skill development for real-world scenarios.',
          heading:'Foundational Kit for Startup founders'
     },
     {
       image: '/images/about/campustoc.png',
       description:
-        'PerpeX helps you redesign your sales funnel for maximum efficiency. Discover a data-driven approach to identify leaks, optimize touchpoints, and convert more leads into paying customers. We guides prospects effortlessly from awareness to purchase through a customized Automated workflow suitable for your Business Model.',
+        'Gain invaluable real-world experience and mentorship during a month-long internship, where you ll apply learned skills in actualbusiness settings, solidifying your understanding and preparing you for professional success.',
          heading:'LevelUP : Campus to Corporate'
     },
 
@@ -95,7 +95,7 @@ const ImageSliders = () => {
             <div className="slide-content">
               <img src={slide.image} alt={`slide_image_${index}`} />
               <div className={`overlay ${index === activeIndex ? 'active' : ''}`} onClick={() => handlePopup(slide.description)}>
-                <p>{slide.description}</p>
+                <p>Show Details</p>
               </div>
               <Link href="/support">
                 <button className="enquiry-button">

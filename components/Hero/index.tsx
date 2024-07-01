@@ -39,7 +39,9 @@ const Hero = () => {
 
   return (
     <div className="AppContainer">
-      
+      <video autoPlay muted loop className="HeroVideo">
+        <source src="/images/hero/Bg.mp4" type="video/mp4" />
+      </video>
         <div className={`mx-auto max-w-7xl px-4 md:px-8 2xl:px-0 Content`}>
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5" style={{ marginLeft: '100px', width: '100%' }}>
             <div className="md:w-1/2">

@@ -83,7 +83,7 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Quick Links
+                    
                   </h4>
 
                   <ul>
@@ -100,7 +100,7 @@ const Footer = () => {
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Product
+                       Terms and conditions
                       </a>
                     </li>
                     <li>
@@ -108,7 +108,7 @@ const Footer = () => {
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Careers
+                       Privacy policy
                       </a>
                     </li>
                     
@@ -134,7 +134,7 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Support
+                    
                   </h4>
 
                   <ul>
@@ -143,7 +143,7 @@ const Footer = () => {
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Company
+                       About us
                       </a>
                     </li>
                     <li>
@@ -151,7 +151,7 @@ const Footer = () => {
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Press media
+                        Contact us
                       </a>
                     </li>
                     <li>
@@ -159,7 +159,7 @@ const Footer = () => {
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Our Blog
+                        Refund policy
                       </a>
                     </li>
                     <li>
@@ -297,7 +297,7 @@ const Footer = () => {
               className="animate_top"
             >
               <p>
-                &copy; {new Date().getFullYear()} Solid. All rights reserved
+                &copy; {new Date().getFullYear()} Perpex. All rights reserved
               </p>
             </motion.div>
 
