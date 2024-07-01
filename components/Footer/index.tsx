@@ -59,7 +59,7 @@ const Footer = () => {
                   href="#"
                   className="text-itemtitle font-medium text-black dark:text-white"
                 >
-                  hello@perpex.com
+                 info@perpex.in
                 </a>
               </motion.div>
 
