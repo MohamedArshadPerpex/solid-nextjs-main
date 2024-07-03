@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`dark:bg-black ${inter.className}`}>
-         {!loadingComplete && (
+         {/* {!loadingComplete && (
           <>
           <div className="loading-container">
           <svg
@@ -80,8 +80,8 @@ export default function RootLayout({
         }}>Loading...</p>
         </>
         
-      )}
-      {loadingComplete && (
+      )} */}
+      {/* {loadingComplete && ( */}
         <ThemeProvider
           enableSystem={false}
           attribute="class"
@@ -90,12 +90,12 @@ export default function RootLayout({
           <Lines />
           <Backround />
           <Header />
-          <Cursor />
+          {/* <Cursor /> */}
           <ToasterContext />
           {children}
           <ScrollToTop />
         </ThemeProvider>
-         )}
+         {/* )} */}
       </body>
     </html>
   );

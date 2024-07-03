@@ -58,7 +58,7 @@ const FunFact = () => {
             viewport={{ once: true }}
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
             style={{
-              marginLeft: '20px'
+              marginLeft: '9px'
 
             }}
           >
@@ -68,7 +68,7 @@ const FunFact = () => {
             {/* Example paragraph or text */}
             <p className="text-base text-gray-600 dark:text-gray-400">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Sed ac
-              dolor sit amet lorem bibendum laoreet. Nulla facilisi. Suspendisse
+              dolor sit amet lorem bibendum laoreet. Nulla facilisi <br /> Suspendisse
               potenti.
             </p>
           </motion.div>
@@ -89,28 +89,28 @@ const FunFact = () => {
               {/* Left-side images */}
               <div className="wrapper carouselverticalone verticalcolumnone">
                 <div className="itemLeft item1">
-                  <img src="/images/funfact/20.png" alt="" />
+                  <img src="/images/funfact/1.png" alt="" />
                 </div>
                 <div className="itemLeft item2">
-                  <img src="/images/funfact/21.png" alt="" />
+                  <img src="/images/funfact/2.png" alt="" />
                 </div>
                 <div className="itemLeft item3">
-                  <img src="/images/funfact/22.png" alt="" />
+                  <img src="/images/funfact/3.png" alt="" />
                 </div>
                 <div className="itemLeft item4">
-                  <img src="/images/funfact/23.png" alt="" />
+                  <img src="/images/funfact/4.png" alt="" />
                 </div>
                 <div className="itemLeft item5">
-                  <img src="/images/funfact/24.png" alt="" />
+                  <img src="/images/funfact/5.png" alt="" />
                 </div>
                 <div className="itemLeft item6">
-                  <img src="/images/funfact/28.png" alt="" />
+                  <img src="/images/funfact/6.png" alt="" />
                 </div>
                 <div className="itemLeft item7">
-                  <img src="/images/funfact/102.png" alt="" />
+                  <img src="/images/funfact/7.png" alt="" />
                 </div>
                 <div className="itemLeft item8">
-                  <img src="/images/funfact/35.png" alt="" />
+                  <img src="/images/funfact/8.png" alt="" />
                 </div>
               </div>
             </div>
@@ -119,28 +119,28 @@ const FunFact = () => {
               {/* Right-side images */}
               <div className="wrapper carouselverticaltwo verticalcolumntwo">
                 <div className="itemRight item1">
-                  <img src="/images/funfact/49.png" alt="" />
+                  <img src="/images/funfact/9.png" alt="" />
                 </div>
                 <div className="itemRight item2">
-                  <img src="/images/funfact/56.png" alt="" />
+                  <img src="/images/funfact/10.png" alt="" />
                 </div>
                 <div className="itemRight item3">
-                  <img src="/images/funfact/90.png" alt="" />
+                  <img src="/images/funfact/11.png" alt="" />
                 </div>
                 <div className="itemRight item4">
-                  <img src="/images/funfact/91.png" alt="" />
+                  <img src="/images/funfact/12.png" alt="" />
                 </div>
                 <div className="itemRight item5">
-                  <img src="/images/funfact/92.png" alt="" />
+                  <img src="/images/funfact/13.png" alt="" />
                 </div>
                 <div className="itemRight item6">
-                  <img src="/images/funfact/93.png" alt="" />
+                  <img src="/images/funfact/14.png" alt="" />
                 </div>
                 <div className="itemRight item7">
-                  <img src="/images/funfact/94.png" alt="" />
+                  <img src="/images/funfact/15.png" alt="" />
                 </div>
                 <div className="itemRight item8">
-                  <img src="/images/funfact/95.png" alt="" />
+                  <img src="/images/funfact/16.png" alt="" />
                 </div>
               </div>
             </div>
@@ -148,56 +148,56 @@ const FunFact = () => {
               {/* Left-side images */}
               <div className="wrapper carouselverticalfour verticalcolumnfour">
                 <div className="itemLeft item1">
-                  <img src="/images/funfact/20.png" alt="" />
+                  <img src="/images/funfact/17.png" alt="" />
                 </div>
                 <div className="itemLeft item2">
-                  <img src="/images/funfact/21.png" alt="" />
+                  <img src="/images/funfact/18.png" alt="" />
                 </div>
                 <div className="itemLeft item3">
-                  <img src="/images/funfact/22.png" alt="" />
+                  <img src="/images/funfact/19.png" alt="" />
                 </div>
                 <div className="itemLeft item4">
-                  <img src="/images/funfact/23.png" alt="" />
+                  <img src="/images/funfact/20.png" alt="" />
                 </div>
                 <div className="itemLeft item5">
-                  <img src="/images/funfact/24.png" alt="" />
+                  <img src="/images/funfact/1.png" alt="" />
                 </div>
                 <div className="itemLeft item6">
-                  <img src="/images/funfact/28.png" alt="" />
+                  <img src="/images/funfact/2.png" alt="" />
                 </div>
                 <div className="itemLeft item7">
-                  <img src="/images/funfact/102.png" alt="" />
+                  <img src="/images/funfact/3.png" alt="" />
                 </div>
                 <div className="itemLeft item8">
-                  <img src="/images/funfact/35.png" alt="" />
+                  <img src="/images/funfact/4.png" alt="" />
                 </div>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-505px' }}>
               <div className="wrapper carouselverticalthree verticalcolumnthree">
                 <div className="itemLeft item1">
-                  <img src="/images/funfact/96.png" alt="" />
+                  <img src="/images/funfact/12.png" alt="" />
                 </div>
                 <div className="itemLeft item2">
-                  <img src="/images/funfact/97.png" alt="" />
+                  <img src="/images/funfact/5.png" alt="" />
                 </div>
                 <div className="itemLeft item3">
-                  <img src="/images/funfact/98.png" alt="" />
+                  <img src="/images/funfact/6.png" alt="" />
                 </div>
                 <div className="itemLeft item4">
-                  <img src="/images/funfact/99.png" alt="" />
+                  <img src="/images/funfact/7.png" alt="" />
                 </div>
                 <div className="itemLeft item5">
-                  <img src="/images/funfact/101.png" alt="" />
+                  <img src="/images/funfact/8.png" alt="" />
                 </div>
                 <div className="itemLeft item6">
-                  <img src="/images/funfact/28.png" alt="" />
+                  <img src="/images/funfact/9.png" alt="" />
                 </div>
                 <div className="itemLeft item7">
-                  <img src="/images/funfact/102.png" alt="" />
+                  <img src="/images/funfact/10.png" alt="" />
                 </div>
                 <div className="itemLeft item8">
-                  <img src="/images/funfact/35.png" alt="" />
+                  <img src="/images/funfact/11.png" alt="" />
                 </div>
               </div>
             </div>

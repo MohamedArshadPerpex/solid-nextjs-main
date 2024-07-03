@@ -117,7 +117,7 @@ const ImageSliders = () => {
         </div>
       </Swiper>
       {showPopup && (
-        <div className="popup">
+        <div className="popups">
           <div className="popup-content">
             <span className="close-popup" onClick={closePopup}>
               &times;

@@ -15,7 +15,7 @@ const Hero = () => {
     "50,000+ Salary?",
     "On The Job Training Program?",
     "Organic Marketing Strategies?",
-    "Parallel Sales Team?",
+    "Parallel Sales Team ",
     "Business Development Solutions?",
   ];
 

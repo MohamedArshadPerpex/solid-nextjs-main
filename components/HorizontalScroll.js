@@ -1,34 +1,40 @@
-// app/(site)/page.tsx
-"use client"; // Ensure this directive is at the top of your client component
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Footer from './Footer';
+import Brands from './Brands';
+import ImageSlider from './imageSlider/ImageSlider';
+import FeaturesTab from './FeaturesTab';
+import FunFact from './FunFact';
+import Contact from './Contact';
+import './Scroll.css'
 
-
-import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import FeaturesTab from '../components/FeaturesTab/index'
-import FAQ from '../components/FAQ/index'
-import Footer from '../components/Footer/index'
-import Brands from "./Brands";
-import Contact from '../components/Contact/index'
-
-export default function HorizontalScroll() {
+function HorizontalScroll() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    const sectionsCount = 13; // Adjust based on the number of sections
-    const pin = gsap.to(sectionRef.current, {
-      x: () => `-${(sectionsCount - 1) * 100}vw`,
-      ease: "none",
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        pin: true,
-        scrub: 1,
-        end: () => `+=${(sectionsCount - 1) * window.innerWidth}`
+    const sectionsCount = 5; // Adjust this value based on the number of sections
+    const pin = gsap.fromTo(
+      sectionRef.current,
+      {
+        translateX: 0,
+      },
+      {
+        translateX: `-${sectionsCount * 100}vw`,
+        ease: 'none',
+        duration: 1,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: 'top top',
+          end: `+=${sectionsCount * 1000}`,
+          scrub: 0.6,
+          pin: true,
+        },
       }
-    });
+    );
 
     return () => {
       pin.kill(); // Kill the animation on component unmount
@@ -36,38 +42,33 @@ export default function HorizontalScroll() {
   }, []);
 
   return (
-    <main className="overflow-x-hidden">
-      <div ref={triggerRef} className="relative w-full">
-        <div ref={sectionRef} className="flex w-[900vw]">
-          <div className="flex-none w-screen h-screen">
+    <div className="scroll-container">
+      <section className="scroll-section-outer">
+        <div ref={triggerRef}>
+          <div ref={sectionRef} className="scroll-section-inner">
+            <div className="scroll-section">
             <Brands />
-          </div>
-          <div className="flex-none w-screen h-screen">
+            </div>
+            <div className="scroll-section">
             <ImageSlider />
-          </div>
-          {/* <div className="flex-none w-screen h-screen">
-            <Feature />
-          </div> */}
-          <div className="flex-none w-screen h-screen">
+            </div>
+            <div className="scroll-section">
             <FeaturesTab />
-          </div>
-          {/* <div className="flex-none w-screen h-screen">
+            </div>
+            <div className="scroll-section">
             <FunFact />
-          </div> */}
-          {/* <div className="flex-none w-screen h-screen">
-            <CTA />
-          </div> */}
-          <div className="flex-none w-screen h-screen">
-            <FAQ />
-          </div>
-          <div className="flex-none w-screen h-screen">
+            </div>
+            <div className="scroll-section">
             <Contact />
-          </div>
-          <div className="flex-none w-screen h-screen">
+            </div>
+            <div className="scroll-section">
             <Footer />
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </section>
+    </div>
   );
 }
+
+export default HorizontalScroll;
