@@ -1,5 +1,5 @@
-// app/(site)/page.tsx
-"use client"; // Ensure this directive is at the top of your client component
+
+"use client"; 
 
 import Hero from "@/components/Hero";
 import Brands from "@/components/Brands";
