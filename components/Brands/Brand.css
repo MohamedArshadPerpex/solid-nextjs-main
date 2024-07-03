@@ -84,3 +84,13 @@
   transition: transform 0.2s 0.2s;
 }
 
+@media (max-width: 500px) {
+  h3.welcome-text {
+  color: whitesmoke;
+  font-size: 4vw;
+  margin-left: 88px;
+  margin-top: 178px;
+  position: absolute;
+  font-family: poppins;
+}
+}
