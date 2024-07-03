@@ -137,10 +137,11 @@ const Corporate = () => {
                   Enquiry Now
                 </button>
               </Link>
+              <p className='headings'>{slide.heading}</p>
             </div>
           </SwiperSlide>
         ))}
-        <div className="slider-controller">
+        <div className="slider-controllers">
           <div className="swiper-button-prev slider-arrow">
             <IoIosArrowDropleftCircle />
           </div>
@@ -157,6 +158,7 @@ const Corporate = () => {
               &times;
             </span>
             <div className="popup-description">
+              <h6>{popupContent.heading}</h6>
               <p>{popupContent.description}</p>
             </div>
             <div className="points">
@@ -164,12 +166,13 @@ const Corporate = () => {
               <h4>The Result?</h4>
               <ul>
                 {popupContent.points.map((point, idx) => (
-                  <li key={idx}>{point}</li>
+                  <li key={idx} className='main-li'>○{point}</li>
                 ))}
               </ul>
             </div>
             <div className="image-left">
               <img src={popupContent.image} alt={`popup_image_${activeIndex}`} className="popup-image" />
+              <Link href='/support'><button className='main-button'>join now</button></Link>
             </div>
             </div>
           </div>

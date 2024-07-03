@@ -26,7 +26,7 @@
   
   /* 1st Vertical Carousel (left-hand side) */
   .carouselverticalone {
-    animation: looping1 25s linear infinite;
+    animation: looping1 55s linear infinite;
   }
   
   .verticalcolumnone {
@@ -58,14 +58,12 @@
   
   /* 2nd Vertical Carousel (right-hand side) */
   .carouselverticaltwo {
-    animation: looping2 25s linear infinite reverse;
+    animation: looping2 55s linear infinite reverse;
   }
   
   .verticalcolumntwo {
     margin-left: 418px;
-    margin-top: 10px;
     max-height: 550px;
-    height: 550px;
     width: 150px;
     overflow: hidden;
     -webkit-mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
@@ -90,7 +88,7 @@
   }
 
   .carouselverticalthree {
-    animation: looping3 25s linear infinite;
+    animation: looping3 55s linear infinite;
   }
   
   .verticalcolumnthree {
@@ -209,15 +207,16 @@
   }
   .verticalcolumfour {
     margin-left: 100px;
-    max-height: 600px;
-    height: 600px;
+    margin-top: 10px;
+    max-height: 550px;
+    height: 550px;
     width: 150px;
     overflow: hidden;
     -webkit-mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
     mask-image: linear-gradient(transparent, black 20%, black 80%, transparent 100%);
   }
   
-  @keyframes looping1 {
+  @keyframes looping4 {
     0% {
       transform: translateY(0px);
     }
@@ -234,7 +233,7 @@
     }
   }
   .carouselverticalfour {
-    animation: looping1 25s linear infinite;
+    animation: looping2 100s linear infinite reverse;
   }
   @media only screen and (max-width: 301px) {
     .content {

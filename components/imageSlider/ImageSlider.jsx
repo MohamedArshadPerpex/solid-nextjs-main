@@ -16,7 +16,8 @@ const ImageSlider = () => {
                 grabCursor={true}
                 centeredSlides={true}
                 loop={true}
-                slidesPerView={'auto'}
+                slidesPerView={3}  // Show 3 slides per view initially
+                spaceBetween={30}  // Space between slides
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
@@ -32,67 +33,44 @@ const ImageSlider = () => {
                 modules={[EffectCoverflow, Pagination, Navigation]}
                 className="swiper_containers"
             >
-                <SwiperSlide style={{
-                    width:'300px',
-                    width:'300px'
-                }} className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/campus.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide  style={{
-                    width:'300px',width:'300px'
-                }}  className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/campus01.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide  style={{
-                    width:'300px',width:'300px'
-                }}  className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/campus02.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide  style={{
-                    width:'300px',width:'300px'
-                }}  className='swiper-slides'>
-                    <img src="/images/about/campus01.jpg" alt="slide_image" />  
+                <SwiperSlide className='swiper-slide'>
+                    <img src="/images/about/campus01.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide  style={{
-                    width:'300px',width:'300px'
-                }}  className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/campus02.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide  style={{
-                    width:'300px',width:'300px'
-                }}  className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/campus03.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide  style={{
-                    width:'300px',width:'300px'
-                }} className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/campus04.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide  style={{
-                    width:'300px',width:'300px'
-                }}  className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/upskill01.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide  style={{
-                    width:'300px',width:'300px'
-                }}  className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/upskill02.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide  style={{
-                    width:'300px',width:'300px'
-                }}  className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/upskill03.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide  style={{
-                    width:'300px',width:'300px'
-                }}  className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/upskill04.jpg" alt="slide_image" />
                 </SwiperSlide>
                 <div className="slider-controller">
-                    <div className="swiper-button-prev slider-arrow">
+                    <div className="swiper-button-prev slider-arrows">
                         <IoIosArrowDropleftCircle />
                     </div>
-                    <div className="swiper-button-next slider-arrow">
+                    <div className="swiper-button-next slider-arrows">
                         <IoIosArrowDroprightCircle />
                     </div>
                     <div className="swiper-pagination"></div>

@@ -11,13 +11,7 @@ const FunFact = () => {
       <section className="px-4 py-20 md:px-8 lg:py-22.5 2xl:px-0">
         <div className="relative z-1 mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-27.5" style={{ marginTop: '12px' }}>
           {/* Images for decorative elements */}
-          <Image
-            width={335}
-            height={384}
-            src="/images/shape/shape-04.png"
-            alt="Man"
-            className="absolute -left-15 -top-25 -z-1 lg:left-0"
-          />
+         
           <Image
             width={132}
             height={132}
@@ -58,7 +52,7 @@ const FunFact = () => {
             viewport={{ once: true }}
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
             style={{
-              marginLeft: '9px'
+              marginLeft: '0px'
 
             }}
           >
@@ -79,13 +73,12 @@ const FunFact = () => {
             marginLeft: '608px',
             width: '599px',
             overflow: 'hidden',
-            border: '2px solid #ccc',
             borderRadius: '8px',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
             padding: '20px',
             height: '351px'
           }}>
-            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '95px' }}>
+            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '0px' }}>
               {/* Left-side images */}
               <div className="wrapper carouselverticalone verticalcolumnone">
                 <div className="itemLeft item1">
@@ -144,7 +137,7 @@ const FunFact = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-1467px',marginLeft:'-172px' }}>
+            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-250px;',marginLeft:'-172px' }}>
               {/* Left-side images */}
               <div className="wrapper carouselverticalfour verticalcolumnfour">
                 <div className="itemLeft item1">
@@ -173,30 +166,30 @@ const FunFact = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-505px' }}>
+            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-1996px' }}>
               <div className="wrapper carouselverticalthree verticalcolumnthree">
-                <div className="itemLeft item1">
+                <div className="itemRight item1">
                   <img src="/images/funfact/12.png" alt="" />
                 </div>
-                <div className="itemLeft item2">
+                <div className="itemRight item2">
                   <img src="/images/funfact/5.png" alt="" />
                 </div>
-                <div className="itemLeft item3">
+                <div className="itemRight item3">
                   <img src="/images/funfact/6.png" alt="" />
                 </div>
-                <div className="itemLeft item4">
+                <div className="itemRight item4">
                   <img src="/images/funfact/7.png" alt="" />
                 </div>
-                <div className="itemLeft item5">
+                <div className="itemRight item5">
                   <img src="/images/funfact/8.png" alt="" />
                 </div>
-                <div className="itemLeft item6">
+                <div className="itemRight item6">
                   <img src="/images/funfact/9.png" alt="" />
                 </div>
-                <div className="itemLeft item7">
+                <div className="itemRight item7">
                   <img src="/images/funfact/10.png" alt="" />
                 </div>
-                <div className="itemLeft item8">
+                <div className="itemRight item8">
                   <img src="/images/funfact/11.png" alt="" />
                 </div>
               </div>
