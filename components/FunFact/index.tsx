@@ -61,9 +61,10 @@ const FunFact = () => {
             </h2>
             {/* Example paragraph or text */}
             <p className="text-base text-gray-600 dark:text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Sed ac
-              dolor sit amet lorem bibendum laoreet. Nulla facilisi <br /> Suspendisse
-              potenti.
+            Our expansive Client-Collaboration Network unlocks success beyond expectation. We collaborate with industry leaders, 
+            seamlessly integrating their expertise with PerpeX Services.
+             This unified approach ensures we pinpoint the perfect talent to flawlessly 
+             match your unique needs and propel your business forward.
             </p>
           </motion.div>
 
