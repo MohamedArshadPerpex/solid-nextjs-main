@@ -114,10 +114,11 @@
     width: 271px;
   }
   .swiper-slide {
+    margin-top: -120px;
     width: 28rem !important;
     height: 36rem !important;
   }
-  .swiper-slide img {
+  .slide-content img {
     margin-left:8px;
     width: 38rem !important;
     height: 36rem !important;
@@ -166,11 +167,11 @@
 @media (max-width: 450px) {
   .slider-controller .swiper-button-next {
     right: 2%;
-    top: 65%;
+    top: 56%;
   }
   .slider-controller .swiper-button-prev {
     left: 2%;
-    top: 65%;
+    top: 56%;
   }
 }
 

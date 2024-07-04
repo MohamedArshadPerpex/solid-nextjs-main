@@ -303,3 +303,13 @@ h4{
 .popup-image:hover {
   transform: scale(1.1); /* Scale image on hover for a slight zoom effect */
 }
+@media (max-width: 450px) {
+  .slider-controller .swiper-button-next {
+    right: 2%;
+    top: 56%;
+  }
+  .slider-controller .swiper-button-prev {
+    left: 2%;
+    top: 56%;
+  }
+}

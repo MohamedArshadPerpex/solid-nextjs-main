@@ -68,16 +68,7 @@ const FunFact = () => {
           </motion.div>
 
           {/* Vertical carousels */}
-          <div className='leftside' style={{
-            marginTop: '-282px',
-            marginLeft: '608px',
-            width: '599px',
-            overflow: 'hidden',
-            borderRadius: '8px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            padding: '20px',
-            height: '351px'
-          }}>
+          <div className='leftside'>
             <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '0px' }}>
               {/* Left-side images */}
               <div className="wrapper carouselverticalone verticalcolumnone">
@@ -141,28 +132,28 @@ const FunFact = () => {
               {/* Left-side images */}
               <div className="wrapper carouselverticalfour verticalcolumnfour">
                 <div className="itemLeft item1">
-                  <img src="/images/funfact/17.png" alt="" />
+                  <img src="/images/funfact/11.png" alt="" />
                 </div>
                 <div className="itemLeft item2">
-                  <img src="/images/funfact/18.png" alt="" />
+                  <img src="/images/funfact/12.png" alt="" />
                 </div>
                 <div className="itemLeft item3">
-                  <img src="/images/funfact/19.png" alt="" />
+                  <img src="/images/funfact/13.png" alt="" />
                 </div>
                 <div className="itemLeft item4">
-                  <img src="/images/funfact/20.png" alt="" />
+                  <img src="/images/funfact/14.png" alt="" />
                 </div>
                 <div className="itemLeft item5">
-                  <img src="/images/funfact/1.png" alt="" />
+                  <img src="/images/funfact/7.png" alt="" />
                 </div>
                 <div className="itemLeft item6">
-                  <img src="/images/funfact/2.png" alt="" />
+                  <img src="/images/funfact/19.png" alt="" />
                 </div>
                 <div className="itemLeft item7">
-                  <img src="/images/funfact/3.png" alt="" />
+                  <img src="/images/funfact/9.png" alt="" />
                 </div>
                 <div className="itemLeft item8">
-                  <img src="/images/funfact/4.png" alt="" />
+                  <img src="/images/funfact/8.png" alt="" />
                 </div>
               </div>
             </div>
