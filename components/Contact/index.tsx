@@ -159,7 +159,8 @@ const Contact = () => {
                 {emailError && <p className="text-red-500" style={{
                   marginLeft: '272px',
                   marginTop: '-22px',
-                  height: '46px'
+                  height: '46px',
+                  fontSize:'10px'
                 }}>{emailError}</p>}
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
@@ -185,7 +186,8 @@ const Contact = () => {
                 {phoneError && <p className="text-red-500" style={{
                     marginLeft: '272px',
                     marginTop: '-22px',
-                    height: '46px'
+                    height: '46px',
+                    fontSize:'10px'
                   }}>{phoneError}</p>}
                 <div className="mb-11.5 flex textarea-section">
                   <textarea

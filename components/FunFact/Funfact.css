@@ -266,10 +266,10 @@
       height: 36rem !important;
     }
     .leftside{
-      margin-left: -122px;
+      margin-left: 128px;
       display: flex;
       margin-top: 10px;
-      width: 415px;
+      width: 312px;
       overflow: hidden;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
