@@ -113,17 +113,20 @@
     height: 47rem;
     width: 341px;
   }
-  .swiper-slide {
+  .swiper-slides {
     margin-top: -120px;
     width: 36rem !important;
     height: 36rem !important;
   }
-  .slide-content img {
-    margin-left:8px;
-    width: 38rem !important;
-    height: 36rem !important;
+  .slide-contents img {
+    width: 23rem !important;
+height: 11rem !important;
   }
-  .swiper-slide img {
+  .slide-contents{
+    margin-top: 183px;
+margin-left: 20px;
+  }
+  .swiper-slides img {
     width: 37rem;
     height: 35rem;
       border-radius: 1rem;
@@ -132,7 +135,7 @@
   }
 }
 
-.swiper-slide img {
+.swiper-slides img {
     width: 32rem;
     height: 23rem;
     border-radius: 1rem;
