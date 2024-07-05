@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <footer className="border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection"
       style={{
-        marginTop:' 129px;'
+        marginTop:'129px'
       }}>
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Footer Top --> */}
@@ -191,7 +191,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                  {/* <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
                     Newsletter
                   </h4>
                   <p className="mb-4 w-[90%]">
@@ -232,7 +232,7 @@ const Footer = () => {
                         </svg>
                       </button>
                     </div>
-                  </form>
+                  </form> */}
                 </motion.div>
               </div>
             </div>

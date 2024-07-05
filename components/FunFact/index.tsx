@@ -129,7 +129,7 @@ const FunFact = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-250px;',marginLeft:'-172px' }}>
+            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-250px',marginLeft:'-172px' }}>
               {/* Left-side images */}
               <div className="wrapper carouselverticalfour verticalcolumnfour">
                 <div className="itemLeft item1">
