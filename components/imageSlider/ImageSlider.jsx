@@ -60,7 +60,7 @@ const ImageSlider = () => {
                 <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/upskill02.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slides'>
+                <SwiperSlide className='swiper-slide'>
                     <img src="/images/about/upskill03.jpg" alt="slide_image" />
                 </SwiperSlide>
                 <SwiperSlide className='swiper-slides'>

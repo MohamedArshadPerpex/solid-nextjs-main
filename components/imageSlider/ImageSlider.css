@@ -117,6 +117,9 @@
     padding: 2rem 0;
     position: relative;
     }
+    .swiper-3d .swiper-wrapper {
+      transform-style: preserve-3d;
+      }
     .swiper-wrapper {
       position: relative;
       width: 100%;
@@ -127,7 +130,7 @@
       transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
       box-sizing: content-box;
       }
-      .swiper-slide img {
+      .swiper-slides img {
         width: 32rem;
         height: 23rem;
         border-radius: 1rem;
@@ -135,12 +138,16 @@
         object-fit: cover;
         }
         .swiper-slides {
+          margin-left: 69px;
           width: 32rem;
           height: 23rem;
           position: relative;
           margin-top: 11px;
           transition: opacity 0.5s ease, filter 0.5s ease;
           }
+          .container {
+            width: 100%;
+            }
     
 }
 
