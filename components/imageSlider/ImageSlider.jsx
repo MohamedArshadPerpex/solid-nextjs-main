@@ -33,37 +33,37 @@ const ImageSlider = () => {
                 modules={[EffectCoverflow, Pagination, Navigation]}
                 className="swiper_containers"
             >
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/campus.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/campus01.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/campus02.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/campus01.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/campus02.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/campus03.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/campus04.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/upskill01.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/upskill02.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/upskill03.jpg" alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide className='swiper-slide'>
+                <SwiperSlide className='swiper-slides'>
                     <img src="/images/about/upskill04.jpg" alt="slide_image" />
                 </SwiperSlide>
                 <div className="slider-controller">

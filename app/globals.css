@@ -185,20 +185,26 @@ h1 {
   height: 150px;
   margin: -75px 0 0 -75px;
 }
-@media (min-width: 290px) and (max-width: 524px) {
+@media (max-width: 700px) {
   .contact-form {
-    margin-top: -35px;
+    margin-top: 1px;
   } 
-  .contact-section{
+  .error {
+    margin-top: -22px;
+    height: 46px;
+    font-size: 10px;
+  }
+  .contact-section {
     margin-top: 44px;
   }
   .gap-7\.5 {
     gap: 1.875rem;
+  }
+  .textarea-section {
+    height: 37px;
+  }
 }
-.textarea-section{
-  height: 37px;
-}
-}
+
 
 @media (min-width: 1280px) {
 .xl\:text-5xl {
@@ -328,5 +334,13 @@ svg.back-wave {
           margin-top: 154px;
     
       }
+      }
+      .error{
+
+       color: red;
+        margin-left: 272px;
+        margin-top: -22px;
+        height: 46px;
+        font-size:10px
       }
       

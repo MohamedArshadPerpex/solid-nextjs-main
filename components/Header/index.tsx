@@ -83,16 +83,17 @@ const Header = () => {
                 ></span>
               </span>
               <span className="absolute right-0 h-full w-full rotate-45">
-                <span
+                {/* <span
                   className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${
                     !navigationOpen ? "h-0" : "h-full"
                   }`}
-                ></span>
-                <span
+                ></span> */}
+                X
+                {/* <span
                   className={`absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${
                     !navigationOpen ? "h-0" : "h-0.5"
                   }`}
-                ></span>
+                ></span> */}
               </span>
             </span>
           </button>

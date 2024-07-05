@@ -113,16 +113,21 @@
     height: 47rem;
     width: 341px;
   }
-  .swiper-slide {
+  .swiper-slides {
     margin-top: -120px;
     width: 36rem !important;
     height: 36rem !important;
   }
-  .slide-content img {
+  .slide-contents img {
     margin-left:8px;
-    width: 38rem !important;
+    width: 39rem !important;
     height: 36rem !important;
   }
+  .swiper-slides img {
+    margin-left: 8px;
+    width: 35rem !important;
+    height: 36rem !important;
+    }
 }
 
 .swiper-slide img {
