@@ -190,7 +190,10 @@ const Contact = () => {
                     required
                   ></textarea>
                 </div>
-
+                <h6 style={{
+                  textAlign:'center',
+                  fontFamily:'poppins'
+                }}>Connect To Perpex</h6>
                 <div className="flex justify-center">
                   <button
                     type="submit"
@@ -213,6 +216,7 @@ const Contact = () => {
                       />
                     </svg>
                   </button>
+                  
                 </div>
               </form>
             </motion.div>
