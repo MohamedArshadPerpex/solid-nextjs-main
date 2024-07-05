@@ -13,27 +13,27 @@ import './ImageSlider.css';
 const ImageSlider = () => {
   const slides = [
     {
-      image: '/images/about/sales.jpg',
+      image: '/images/about/campus.jpg',
       
     },
     {
-      image: '/images/about/14.png',
+      image: '/images/about/campus01.jpg',
       
     },
     {
-      image: '/images/about/15.png',
+      image: '/images/about/campus02.jpg',
       
     },
     {
-      image: '/images/about/16.png',
+      image: '/images/about/campus03.jpg',
      
     },
     {
-      image: '/images/about/18.png',
+      image: '/images/about/campus04.jpg',
       
     },
     {
-      image: '/images/about/19.png',
+      image: '/images/about/bg01.jpg',
       
     },
   ];
