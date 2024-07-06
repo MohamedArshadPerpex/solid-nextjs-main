@@ -1,4 +1,3 @@
-// Import necessary libraries and styles
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -51,7 +50,6 @@ const FunFact = () => {
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2 collabrates"
-
           >
             <h2 className="mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3" style={{ marginTop: '18px' }}>
               Our Client Collaboration Network
@@ -126,6 +124,7 @@ const FunFact = () => {
                 </div>
               </div>
             </div>
+
             <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-250px', marginLeft: '-172px' }}>
               {/* Left-side images */}
               <div className="wrapper carouselverticalfour verticalcolumnfour">
@@ -155,6 +154,7 @@ const FunFact = () => {
                 </div>
               </div>
             </div>
+
             <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-1788px' }}>
               <div className="wrapper carouselverticalthree verticalcolumnthree">
                 <div className="itemRight item1">

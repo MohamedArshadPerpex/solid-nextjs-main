@@ -26,11 +26,11 @@
   
   /* 1st Vertical Carousel (left-hand side) */
   .carouselverticalone {
-    animation: looping1 55s linear infinite;
+    animation: looping1 300s linear infinite;
   }
   
   .verticalcolumnone {
-    margin-left: 120px;
+    margin-left: 143px;
     max-height: 600px;
     height: 600px;
     width: 150px;
@@ -58,7 +58,7 @@
   
   /* 2nd Vertical Carousel (right-hand side) */
   .carouselverticaltwo {
-    animation: looping2 55s linear infinite reverse;
+    animation: looping2 200s linear infinite reverse;
   }
   
   .verticalcolumntwo {
@@ -88,7 +88,7 @@
   }
 
   .carouselverticalthree {
-    animation: looping3 55s linear infinite;
+    animation: looping3 300s linear infinite;
   }
   
   .verticalcolumnthree {
@@ -233,7 +233,7 @@
     }
   }
   .carouselverticalfour {
-    animation: looping2 100s linear infinite reverse;
+    animation: looping2 300s linear infinite reverse;
   }
   @media only screen and (max-width: 301px) {
     .content {

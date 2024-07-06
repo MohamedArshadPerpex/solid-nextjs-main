@@ -1,14 +1,12 @@
-import React, { useState, useRef, RefObject } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import ImageSliders from '../imageSlider/ImageSliders';
-import Image from 'next/image';
 import Corporate from '../imageSlider/Corporate';
 import './Feature.css';
 
 const FeaturesTab = () => {
-  const [currentTab, setCurrentTab] = useState<string>(''); // Explicitly set type to string
-  const [showPopup, setShowPopup] = useState<boolean>(false); // Explicitly set type to boolean
-  const sectionRef = useRef<HTMLDivElement>(null); // Specify useRef type as HTMLDivElement
+  const [currentTab, setCurrentTab] = useState<string>('');
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const handleTabClick = (tab: string) => {
     setCurrentTab(tab);
@@ -16,7 +14,6 @@ const FeaturesTab = () => {
 
   const closePopup = () => {
     setCurrentTab('');
-    // Ensure sectionRef.current is not null before accessing it
     if (sectionRef.current) {
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
@@ -28,11 +25,8 @@ const FeaturesTab = () => {
         <div className="relative mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0" style={{ marginTop: '169px' }}>
           <div className="absolute -top-16 -z-1 mx-auto h-[350px] w-[90%]">
             <h1 className="Heading">so why are you here?</h1>
-            <Image fill className="dark:hidden" src="/images/shape/shape-dotted-light.svg" alt="Dotted Shape" />
-            <Image fill className="hidden dark:block" src="/images/shape/shape-dotted-dark.svg" alt="Dotted Shape" />
           </div>
 
-          {/* Tab Menus */}
           {!currentTab && (
             <motion.div
               variants={{
@@ -49,29 +43,21 @@ const FeaturesTab = () => {
               whileInView="visible"
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_top mb-15 flex flex-col items-start gap-4 rounded-[10px] border border-stroke bg-white p-4 shadow-solid-5 dark:border-strokedark dark:bg-blacksection dark:shadow-solid-6"
+              className="animate_top mb-15 flex flex-col items-start gap-4 rounded-[10px] border border-stroke bg-white p-4 shadow-solid-5 dark:border-strokedark dark:bg-blacksection dark:shadow-solid-6 choices"
             >
-              <button
-                onClick={() => handleTabClick('tabOne')}
-                className="relative flex w-full cursor-pointer items-center gap-4 px-6 py-2"
-              >
-                <div>
+              <div className="tab-content">
+                <button onClick={() => handleTabClick('tabOne')} className="tab-button">
                   <p className="text-sm font-medium text-black dark:text-white xl:text-regular">Looking to Upskill My Career →</p>
-                </div>
-              </button>
-
-              <button
-                onClick={() => handleTabClick('tabTwo')}
-                className="relative flex w-full cursor-pointer items-center gap-4 px-6 py-2"
-              >
-                <div>
+                </button>
+              </div>
+              <div className="tab-content">
+                <button onClick={() => handleTabClick('tabTwo')} className="tab-button">
                   <p className="text-sm font-medium text-black dark:text-white xl:text-regular">Looking to Organize My Business →</p>
-                </div>
-              </button>
+                </button>
+              </div>
             </motion.div>
           )}
 
-          {/* Tab Content with Slider */}
           {currentTab && (
             <motion.div
               variants={{
@@ -92,7 +78,7 @@ const FeaturesTab = () => {
               style={{ marginTop: '-186px' }}
             >
               {currentTab === 'tabOne' && (
-                <div>
+                <div className="tab-content">
                   <span className="close-popups" onClick={closePopup}>
                     &times;
                   </span>
@@ -113,7 +99,7 @@ const FeaturesTab = () => {
               )}
 
               {currentTab === 'tabTwo' && (
-                <div>
+                <div className="tab-content">
                   <span className="close-popups" onClick={closePopup}>
                     &times;
                   </span>

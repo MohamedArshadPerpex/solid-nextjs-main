@@ -33,9 +33,62 @@
 .features-section .flex a:hover {
   color: #1e40af;
 }
-.Heading{
+
+.Heading {
   height: 40px;
 }
+
+.close-popups {
+  position: absolute;
+  top: 3rem;
+  right: 8rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.choices {
+  display: flex;
+  opacity: 1;
+  transform: none;
+  align-items: center;
+  justify-content: space-between;
+  /* Ensures buttons are aligned at the ends of the container */
+  flex-direction: row;
+}
+
+.tab-content {
+  width: 100%;
+  /* Ensures each tab content occupies full width */
+  margin-bottom: 1rem;
+  /* Adjust spacing between tab contents */
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-button {
+  height: 200px;
+  width: 73%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* Button border radius */
+  text-align: center;
+  /* Align text to the left within button */
+  transition: background-color 0.9s, color 0.3s;
+  /* Button transition effects */
+}
+
+.tab-button:hover {
+  background-color: #555;
+  /* Button hover background color */
+  color: #222;
+  /* Button hover text color */
+}
+
 .close-popups {
   position: absolute;
   top: 3rem;

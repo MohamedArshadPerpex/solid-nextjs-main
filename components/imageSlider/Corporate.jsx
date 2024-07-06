@@ -166,7 +166,7 @@ const Corporate = () => {
                 <h4>The Result?</h4>
                 <ul>
                   {popupContent.points.map((point, idx) => (
-                    <li key={idx} className='main-li'>○{point}</li>
+                    <li key={idx} className='main-li'>{point}</li>
                   ))}
                 </ul>
               </div>
