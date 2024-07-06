@@ -162,18 +162,18 @@ const Corporate = () => {
               <p>{popupContent.description}</p>
             </div>
             <div className="points">
-            <div className="points-shown">
-              <h4>The Result?</h4>
-              <ul>
-                {popupContent.points.map((point, idx) => (
-                  <li key={idx} className='main-li'>○{point}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="image-left">
-              <img src={popupContent.image} alt={`popup_image_${activeIndex}`} className="popup-image" />
-              <Link href='/support'><button className='main-button'>join now</button></Link>
-            </div>
+              <div className="points-shown">
+                <h4>The Result?</h4>
+                <ul>
+                  {popupContent.points.map((point, idx) => (
+                    <li key={idx} className='main-li'>○{point}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="image-left">
+                <img src={popupContent.image} alt={`popup_image_${activeIndex}`} className="popup-image" />
+                <Link href='/support'><button className='main-button'>join now</button></Link>
+              </div>
             </div>
           </div>
         </div>

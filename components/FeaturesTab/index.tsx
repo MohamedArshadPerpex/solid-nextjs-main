@@ -89,7 +89,7 @@ const FeaturesTab = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
               className="animate_top mx-auto max-w-c-1154"
-              style={{ marginTop: '-165px' }}
+              style={{ marginTop: '-186px' }}
             >
               {currentTab === 'tabOne' && (
                 <div>

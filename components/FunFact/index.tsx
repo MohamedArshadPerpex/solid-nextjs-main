@@ -11,7 +11,7 @@ const FunFact = () => {
       <section className="px-4 py-20 md:px-8 lg:py-22.5 2xl:px-0">
         <div className="relative z-1 mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-27.5" style={{ marginTop: '12px' }}>
           {/* Images for decorative elements */}
-         
+
           <Image
             width={132}
             height={132}
@@ -50,21 +50,18 @@ const FunFact = () => {
             whileInView="visible"
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
-            className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
-            style={{
-              marginLeft: '0px'
+            className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2 collabrates"
 
-            }}
           >
             <h2 className="mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3" style={{ marginTop: '18px' }}>
               Our Client Collaboration Network
             </h2>
             {/* Example paragraph or text */}
             <p className="text-base text-gray-600 dark:text-gray-400">
-            Our expansive Client-Collaboration Network unlocks success beyond expectation. We collaborate with industry leaders, 
-            seamlessly integrating their expertise with PerpeX Services.
-             This unified approach ensures we pinpoint the perfect talent to flawlessly 
-             match your unique needs and propel your business forward.
+              Our expansive Client-Collaboration Network unlocks success beyond expectation. We collaborate with industry leaders,
+              seamlessly integrating their expertise with PerpeX Services.
+              This unified approach ensures we pinpoint the perfect talent to flawlessly
+              match your unique needs and propel your business forward.
             </p>
           </motion.div>
 
@@ -129,7 +126,7 @@ const FunFact = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-250px',marginLeft:'-172px' }}>
+            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-250px', marginLeft: '-172px' }}>
               {/* Left-side images */}
               <div className="wrapper carouselverticalfour verticalcolumnfour">
                 <div className="itemLeft item1">
@@ -158,7 +155,7 @@ const FunFact = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-1996px' }}>
+            <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5" style={{ marginTop: '-1788px' }}>
               <div className="wrapper carouselverticalthree verticalcolumnthree">
                 <div className="itemRight item1">
                   <img src="/images/funfact/12.png" alt="" />

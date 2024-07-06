@@ -31,48 +31,47 @@ const Feature = () => {
     <>
       {/* <!-- ===== Features Start ===== --> */}
       <section id="features" className="py-20 lg:py-25 xl:py-30" style={{
-        marginTop:'-70px'
+        marginTop: '-70px'
       }}>
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-          
+
           {/* <!-- Section Title End --> */}
 
           <div style={{
-            marginTop:'-73px'
+            marginTop: '-73px'
           }}>
-          <main className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl"
-    style={{
-      marginTop:'114px'
-    }}
-    >
-      <div
-        className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
-      >
-        {images.map((elem, idx) => (
-          <div
-            key={idx}
-            className={`${
-              idx === activeImage
-                ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out"
-                : "hidden"
-            }`}
-          >
-            <Image
-              src={elem.src}
-              alt=""
-              width={400}
-              height={400}
-              className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
-            />
-          </div>
-        ))}
-      </div>
-      <Description
-        activeImage={activeImage}
-        clickNext={clickNext}
-        clickPrev={clickPrev}
-      />
-    </main>
+            <main className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl"
+              style={{
+                marginTop: '114px'
+              }}
+            >
+              <div
+                className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
+              >
+                {images.map((elem, idx) => (
+                  <div
+                    key={idx}
+                    className={`${idx === activeImage
+                      ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out"
+                      : "hidden"
+                      }`}
+                  >
+                    <Image
+                      src={elem.src}
+                      alt=""
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
+                    />
+                  </div>
+                ))}
+              </div>
+              <Description
+                activeImage={activeImage}
+                clickNext={clickNext}
+                clickPrev={clickPrev}
+              />
+            </main>
           </div>
         </div>
       </section>

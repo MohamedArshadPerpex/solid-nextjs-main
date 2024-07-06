@@ -128,7 +128,7 @@ const Contact = () => {
               className="animate_top w-full rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black md:w-2/3 lg:w-3/4 xl:p-15 contact-section"
             >
               <h2 className="mb-15 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2 section-heading" style={{
-                marginTop:'29px'
+                marginTop: '29px'
               }}>
                 Send a message
               </h2>
@@ -191,8 +191,11 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 <h6 style={{
-                  textAlign:'center',
-                  fontFamily:'poppins'
+                  textAlign: 'center',
+                  fontFamily: 'poppins',
+                  color: 'aliceblue',
+                  marginTop: '-14px',
+                  height: '40px'
                 }}>Connect To Perpex</h6>
                 <div className="flex justify-center">
                   <button
@@ -216,7 +219,7 @@ const Contact = () => {
                       />
                     </svg>
                   </button>
-                  
+
                 </div>
               </form>
             </motion.div>
@@ -239,7 +242,7 @@ const Contact = () => {
               className="animate_top w-full md:w-1/3 md:p-7.5 lg:w-[26%] xl:pt-15"
             >
               <h2 className="mb-12.5 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2" style={{
-                marginTop:'-38px'
+                marginTop: '-38px'
               }}>
                 Find us
               </h2>

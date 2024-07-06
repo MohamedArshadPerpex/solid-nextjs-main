@@ -14,34 +14,23 @@ const ImageSlider = () => {
   const slides = [
     {
       image: '/images/about/campus.jpg',
-      
+
     },
     {
       image: '/images/about/campus01.jpg',
-      
+
     },
     {
       image: '/images/about/campus02.jpg',
-      
-    },
-    {
-      image: '/images/about/campus03.jpg',
-     
+
     },
     {
       image: '/images/about/campus04.jpg',
-      
-    },
-    {
-      image: '/images/about/bg01.jpg',
-      
+
     },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupContent, setPopupContent] = useState(null); // Changed to null initially
-
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
@@ -49,15 +38,6 @@ const ImageSlider = () => {
 
     return () => clearInterval(interval);
   }, [slides.length]); // Re-run effect when slides.length changes
-
-  const handlePopup = (slide) => {
-    setPopupContent(slide);
-    setShowPopup(true);
-  };
-
-  const closePopup = () => {
-    setShowPopup(false);
-  };
 
   return (
     <div className="containers">
@@ -84,11 +64,9 @@ const ImageSlider = () => {
         initialSlide={activeIndex}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index} className={index === activeIndex ? 'active' : ''}>
+          <SwiperSlide key={index} className='swiper-slides'>
             <div className="slide-contents">
               <img src={slide.image} alt={`slide_images_${index}`} onClick={() => handlePopup(slide)} />
-             
-              
             </div>
           </SwiperSlide>
         ))}
@@ -101,7 +79,7 @@ const ImageSlider = () => {
           </div>
         </div>
       </Swiper>
-      
+
     </div>
   );
 };

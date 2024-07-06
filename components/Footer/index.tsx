@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <>
       <footer className="border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection"
-      style={{
-        marginTop:'129px'
-      }}>
+        style={{
+          marginTop: '129px'
+        }}>
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Footer Top --> */}
           <div className="py-20 lg:py-40">
@@ -59,7 +59,7 @@ const Footer = () => {
                   href="#"
                   className="text-itemtitle font-medium text-black dark:text-white"
                 >
-                 info@perpex.in
+                  info@perpex.in
                 </a>
               </motion.div>
 
@@ -83,7 +83,7 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    
+
                   </h4>
 
                   <ul>
@@ -100,7 +100,7 @@ const Footer = () => {
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                       Terms and conditions
+                        Terms and conditions
                       </a>
                     </li>
                     <li>
@@ -108,10 +108,10 @@ const Footer = () => {
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                       Privacy policy
+                        Privacy policy
                       </a>
                     </li>
-                    
+
                   </ul>
                 </motion.div>
 
@@ -134,7 +134,7 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    
+
                   </h4>
 
                   <ul>
@@ -143,7 +143,7 @@ const Footer = () => {
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                       About us
+                        About us
                       </a>
                     </li>
                     <li>

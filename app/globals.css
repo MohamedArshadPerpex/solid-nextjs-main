@@ -161,13 +161,14 @@ pre {
   align-items: center;
   justify-content: center;
 }
+
 body {
   height: 5000px;
   background: linear-gradient(to bottom, rgb(30, 30, 100));
 }
 
 h1 {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   color: white;
   text-transform: uppercase;
@@ -185,21 +186,26 @@ h1 {
   height: 150px;
   margin: -75px 0 0 -75px;
 }
+
 @media (max-width: 700px) {
   .contact-form {
     margin-top: 78px;
-  } 
+  }
+
   .error {
     margin-top: -22px;
     height: 46px;
     font-size: 10px;
   }
+
   .contact-section {
     margin-top: 44px;
   }
+
   .gap-7\.5 {
     gap: 1.875rem;
   }
+
   .textarea-section {
     height: 37px;
   }
@@ -207,11 +213,11 @@ h1 {
 
 
 @media (min-width: 1280px) {
-.xl\:text-5xl {
+  .xl\:text-5xl {
     width: 920px;
     font-size: 3rem;
     line-height: 1;
-}
+  }
 }
 
 .loading-container {
@@ -244,7 +250,7 @@ svg.front-wave {
     top: 180px;
     right: -120px;
   }
-  
+
   to {
     top: -200px;
     right: -2100px;
@@ -265,7 +271,7 @@ svg.back-wave {
     top: 170px;
     left: -40px;
   }
-  
+
   to {
     top: -200px;
     left: -2100px;
@@ -297,19 +303,35 @@ svg.back-wave {
 }
 
 @keyframes firstPointColorShift {
-  0% { color: transparent }
-  20% { color: white }
+  0% {
+    color: transparent
+  }
+
+  20% {
+    color: white
+  }
 }
 
 @keyframes secondPointColorShift {
-  0% { color: transparent }
-  60% { color: white }
+  0% {
+    color: transparent
+  }
+
+  60% {
+    color: white
+  }
 }
 
 @keyframes thirdPointColorShift {
-  0% { color: transparent }
-  100% { color: white }
+  0% {
+    color: transparent
+  }
+
+  100% {
+    color: white
+  }
 }
+
 .content-container {
   animation: slide-in 1s cubic-bezier(0.83, 0, 0.17, 1) forwards;
 }
@@ -321,26 +343,76 @@ svg.back-wave {
 
   }
   } */
-  @media (min-width: 320px) and (max-width:353px) {
-    .loading-container {
-        margin-left: 74px;
-        margin-top: 154px;
-  
-    }
-    }
-    @media (min-width: 402px) and (max-width:685px) {
-      .loading-container {
-          margin-left: 107px;
-          margin-top: 154px;
-    
-      }
-      }
-      .error{
+@media (min-width: 320px) and (max-width:353px) {
+  .loading-container {
+    margin-left: 74px;
+    margin-top: 154px;
 
-       color: red;
-        margin-left: 272px;
-        margin-top: -22px;
-        height: 46px;
-        font-size:10px
-      }
-      
+  }
+}
+
+@media (min-width: 402px) and (max-width:685px) {
+  .loading-container {
+    margin-left: 107px;
+    margin-top: 154px;
+
+  }
+}
+
+.error {
+
+  color: red;
+  margin-left: 272px;
+  margin-top: -22px;
+  height: 46px;
+  font-size: 10px
+}
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -45px;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  animation: rotate 1000ms infinite cubic-bezier(0.77, 0, 0.175, 1);
+}
+.loader::before {
+  background-color: aliceblue;
+}
+.loader::after {
+  background-color: rgb(52, 52, 242);
+  animation-delay: 500ms;
+}
+@keyframes rotate {
+  0%,
+  100% {
+    translate: 90px 0;
+  }
+  25% {
+    scale: 0.3;
+  }
+  50% {
+    translate: 0;
+  }
+  75% {
+    scale: 1;
+  }
+}
+.loader-body{
+  display: flex;
+align-items: center;
+justify-content: center;
+width: 153%;
+height: 529px;
+text-align: center;
+}
+.images img{
+  width: 150px;
+}
