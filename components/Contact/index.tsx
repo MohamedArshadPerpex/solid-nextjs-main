@@ -251,14 +251,14 @@ const Contact = () => {
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                   Our Location
                 </h3>
-                <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+                <p>AL Rahaba Arcade, Chalappuram, Calicut </p>
               </div>
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                   Email Address
                 </h3>
                 <p>
-                  <a href="mailto:yourmail@domainname.com">.com</a>
+                  <a href="mailto:yourmail@domainname.com">info@perpex.com</a>
                 </p>
               </div>
               <div>
@@ -266,7 +266,7 @@ const Contact = () => {
                   Phone Number
                 </h4>
                 <p>
-                  <a href="tel:+009423346343843">+009 42334 6343 843</a>
+                  <a href="tel:+009423346343843">+91 9745 1000 36</a>
                 </p>
               </div>
             </motion.div>
