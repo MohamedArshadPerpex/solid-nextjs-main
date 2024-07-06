@@ -14,19 +14,19 @@ const ImageSlider = () => {
   const slides = [
     {
       image: '/images/about/campus.jpg',
-
+      
     },
     {
       image: '/images/about/campus01.jpg',
-
+      
     },
     {
       image: '/images/about/campus02.jpg',
-
+      
     },
     {
-      image: '/images/about/campus04.jpg',
-
+      image: '/images/about/campus01.jpg',
+      
     },
   ];
 
@@ -64,7 +64,7 @@ const ImageSlider = () => {
         initialSlide={activeIndex}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index} className='swiper-slides'>
+          <SwiperSlide key={index} className={index === activeIndex ? 'active' : ''}>
             <div className="slide-contents">
               <img src={slide.image} alt={`slide_images_${index}`} onClick={() => handlePopup(slide)} />
             </div>
@@ -79,7 +79,7 @@ const ImageSlider = () => {
           </div>
         </div>
       </Swiper>
-
+      
     </div>
   );
 };

@@ -16,19 +16,16 @@
 ::-webkit-scrollbar-track {
   background: #f9f9f9;
 }
-
-h6 {
+h6{
   font-family: bold;
   color: black;
 }
-
-h4 {
+h4{
   text-align: left;
   font-size: 20px;
   height: 41px;
   color: black;
 }
-
 /* Container styles */
 .containermain {
   text-align: center;
@@ -41,7 +38,7 @@ h4 {
 /* Swiper container styles */
 .swiper_container {
   margin-top: -70px;
-  width: 100%;
+  width: 60%;
   height: 52rem;
   padding: 2rem 0;
   position: relative;
@@ -51,25 +48,22 @@ h4 {
   width: 37rem;
   height: 42rem;
   position: relative;
-  perspective: 1000px;
-  /* Add perspective for 3D effect */
+  perspective: 1000px; /* Add perspective for 3D effect */
 }
 
 @media (max-width: 500px) {
   .swiper_container {
     height: 47rem;
   }
-
   .swiper-slide {
     width: 28rem !important;
     height: 36rem !important;
   }
-
   .slide-content img {
     margin-left: 8px;
     width: 39rem !important;
     height: 12rem !important;
-  }
+    }
 }
 
 /* Slide content styles */
@@ -103,8 +97,7 @@ h4 {
   align-items: center;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.6);
-  /* Added background color */
+  background-color: rgba(0, 0, 0, 0.6); /* Added background color */
 }
 
 .swiper-slide:hover .slide-content .overlay {
@@ -116,10 +109,8 @@ h4 {
 
 /* Enquiry button styles */
 .enquiry-button {
-  background-color: #3498db;
-  /* Button background color */
-  color: #ffffff;
-  /* Button text color */
+  background-color: #3498db; /* Button background color */
+  color: #ffffff; /* Button text color */
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -127,14 +118,12 @@ h4 {
   transition: background-color 0.3s ease;
   margin-top: 396px;
 }
-
-.headings {
-  margin-top: -84px
+.headings{
+  margin-top:-84px
 }
 
 .enquiry-button:hover {
-  background-color: #2980b9;
-  /* Button background color on hover */
+  background-color: #2980b9; /* Button background color on hover */
 }
 
 /* Other styles for overlays, popups, etc. as needed */
@@ -158,7 +147,6 @@ h4 {
   .slider-controllers .swiper-button-next {
     right: 11%;
   }
-
   .slider-controllers .swiper-button-prev {
     left: 11%;
   }
@@ -168,7 +156,6 @@ h4 {
   .slider-controllers .swiper-button-next {
     right: 2%;
   }
-
   .slider-controllers .swiper-button-prev {
     left: 2%;
   }
@@ -217,9 +204,8 @@ h4 {
 
 .popup-content {
   margin-top: 50px;
-  background-color: #007bff;
-  /* Bright blue color */
-  background-image: linear-gradient(315deg, #007bff 0%, #ffffff 74%);
+  background-color: #007bff; /* Bright blue color */
+  background-image: linear-gradient(315deg, #007bff 0%, #ffffff 74%); 
   padding: 2rem;
   border-radius: 1rem;
   max-width: 9%;
@@ -230,20 +216,19 @@ h4 {
 }
 
 .close-popup {
-  position: absolute;
-  top: 0rem;
-  right: 0rem;
-  background-color: darkgray;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #fff;
-  border-radius: 50%;
-  height: 34px;
-  width: 34px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+     position: absolute;
+    top: 0rem;
+    right: 0rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -254,31 +239,27 @@ h4 {
   color: #333;
   padding: 1rem 0;
 }
-
 .popup-description h4 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 .points {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-
 @media (max-width: 500px) {
-  .points {
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-    width: 117%;
-    flex-direction: column;
-  }
-
-  .points-shown {
-    width: 100%;
-  }
+.points {
+         display: flex;
+        align-items: flex-start;
+        justify-content: left;
+        width: 117%;
+        flex-direction: column;
+}
+.points-shown {
+  width: 100%;
+}
 
 
 }
@@ -294,91 +275,66 @@ h4 {
 }
 
 .popup-description .popup-image {
-  width: 50%;
-  /* Adjust image width */
+  width: 50%; /* Adjust image width */
   margin-left: auto;
 }
-
-.points-shown {
+.points-shown{
+   width: 50%;
+}
+.image-left{
   width: 50%;
 }
-
-.image-left {
-  width: 50%;
-}
-
-.main-li {
+.main-li{
   margin-top: 5px;
   text-align: left;
   font-size: 15px;
   color: black;
 
 }
-
 .main-button {
-  margin-top: 20px;
-  background-color: #007bff;
-  /* Blue background color */
-  color: #ffffff;
-  /* White text color */
+  margin-top:20px;
+  background-color: #007bff; /* Blue background color */
+  color: #ffffff; /* White text color */
   border: none;
-  padding: 12px 24px;
-  /* Padding around text */
-  font-size: 18px;
-  /* Font size */
+  padding: 12px 24px; /* Padding around text */
+  font-size: 18px; /* Font size */
   cursor: pointer;
-  border-radius: 6px;
-  /* Rounded corners */
-  transition: background-color 0.3s ease;
-  /* Smooth background color transition */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Shadow for depth */
+  border-radius: 6px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
 .main-button:hover {
-  background-color: #0056b3;
-  /* Darker blue on hover */
+  background-color: #0056b3; /* Darker blue on hover */
 }
-
 .popup-image {
-  width: 100%;
-  /* Ensure the image fills its container */
-  max-width: 400px;
-  /* Limit the maximum width of the image */
-  border-radius: 12px;
-  /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Box shadow for depth */
-  transition: transform 0.3s ease;
-  /* Smooth transformation on hover */
+  width: 100%; /* Ensure the image fills its container */
+  max-width: 400px; /* Limit the maximum width of the image */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transformation on hover */
 }
-
 .popup-image:hover {
-  transform: scale(1.1);
-  /* Scale image on hover for a slight zoom effect */
+  transform: scale(1.1); /* Scale image on hover for a slight zoom effect */
 }
-
 @media (max-width: 450px) {
   .slider-controller .swiper-button-next {
     right: 2%;
     top: 56%;
   }
-
   .slider-controller .swiper-button-prev {
     left: 2%;
     top: 56%;
   }
 }
-
 @media (max-width: 500px) {
   .slide-content img {
-    margin-top: 165px;
-    margin-left: 80px;
-    width: 18rem !important;
-    height: 11rem !important;
+      margin-top: 165px;
+      margin-left: 80px;
+      width: 18rem !important;
+      height: 11rem !important;
   }
-
-  .close-popups {
+  .close-popups{
     position: absolute;
     top: 3rem;
     right: 1rem;
@@ -386,22 +342,18 @@ h4 {
     cursor: pointer;
     color: #555;
   }
-
-  .popup-content {
+  .popup-content{
     max-width: 13%;
-
+ 
   }
-
-  .containermain {
+  .containermain{
     margin-left: -3px;
     margin-top: -216px;
   }
-
-  .swiper-slide .slide-content .overlay {
-    margin-top: 108px;
-  }
-
-  .swiper-slide .slide-content .overlay p {
-    margin-top: 55px;
-  }
+.swiper-slide .slide-content .overlay {
+  margin-top: 108px;
+}
+.swiper-slide .slide-content .overlay p{
+  margin-top: 55px;
+}
 }

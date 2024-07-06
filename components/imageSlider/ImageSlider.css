@@ -127,7 +127,6 @@
   }
 
   .slide-contents img {
-    margin-top: -41px;
     width: 28rem !important;
     height: 18rem !important;
   }
@@ -159,7 +158,12 @@
   display: none;
 }
 
-.slider-controller {}
+.slider-controller {
+  .slider-controller .swiper-button-prev {
+    top: 250px;
+    left: 19%;
+    }
+}
 
 .slider-controller .swiper-button-prev,
 .slider-controller .swiper-button-next {

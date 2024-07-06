@@ -278,10 +278,14 @@
       align-items: center; 
       justify-content: center;
     }
+    .collabrates {
+      margin-left: 0px;
+      width: 400px;
+      }
   }
   .collabrates{
     margin-left: 0px;
-    width: 600px
+    width: 400px
   }
   
   
