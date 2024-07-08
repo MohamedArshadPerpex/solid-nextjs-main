@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -52,12 +53,14 @@ const Footer = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
 
-                <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
+                <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]"
+                  >
                   contact
                 </p>
                 <a
                   href="#"
                   className="text-itemtitle font-medium text-black dark:text-white"
+                  
                 >
                   info@perpex.in
                 </a>
@@ -88,27 +91,26 @@ const Footer = () => {
 
                   <ul>
                     <li>
+                      <Link
+                        href={`/docs`}
+                      >
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
                       <a
                         href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                        className="mt-2 inline-block hover:text-primary"
                       >
-                        Home
+                        Life@perpex
                       </a>
                     </li>
                     <li>
                       <a
                         href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                        className="mt-2 inline-block hover:text-primary"
                       >
-                        Terms and conditions
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Privacy policy
+                        Career
                       </a>
                     </li>
 
@@ -139,36 +141,32 @@ const Footer = () => {
 
                   <ul>
                     <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                      <Link
+                        href={`/docs`}
                       >
-                        About us
-                      </a>
+                        Terms & Conditions
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                      <Link
+                        href={`/docs`}
                       >
-                        Contact us
-                      </a>
+                        Privacy & Policy
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                      <Link
+                        href={`/docs`}
                       >
                         Refund policy
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                      <Link
+                        href={`/support`}
                       >
                         Contact Us
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </motion.div>

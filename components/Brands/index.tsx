@@ -6,10 +6,7 @@
       <>
         <h3 className="welcome-text">Welcome To</h3>
         <div className="wrap">
-          <p className="text">Perpex</p>
-          <p className="text">Perpex</p>
-          <p className="text">Perpex</p>
-          <p className="crack"></p>
+          <p className="text">Perpex</p>  
         </div>
       </>
     );

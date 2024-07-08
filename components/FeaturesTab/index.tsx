@@ -24,7 +24,7 @@ const FeaturesTab = () => {
       <section className="relative pb-20 pt-18.5 lg:pb-22.5" ref={sectionRef}>
         <div className="relative mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0" style={{ marginTop: '169px' }}>
           <div className="absolute -top-16 -z-1 mx-auto h-[350px] w-[90%]">
-            <h1 className="Heading">so why are you here?</h1>
+            <h1 className="Heading font-bold">so why are you here?</h1>
           </div>
 
           {!currentTab && (
@@ -46,14 +46,21 @@ const FeaturesTab = () => {
               className="animate_top mb-15 flex flex-col items-start gap-4 rounded-[10px] border border-stroke bg-white p-4 shadow-solid-5 dark:border-strokedark dark:bg-blacksection dark:shadow-solid-6 choices"
             >
               <div className="tab-content">
-                <button onClick={() => handleTabClick('tabOne')} className="tab-button">
-                  <p className="text-sm font-medium text-black dark:text-white xl:text-regular">Looking to Upskill My Career →</p>
-                </button>
+                <div onClick={() => handleTabClick('tabOne')} className="tab-button">
+                  <p className="text-sm font-medium text-black dark:text-white xl:text-regular"
+                  style={{
+                    fontFamily:'poppins'
+                  }}>Looking to Upskill My Career →</p>
+                </div>
               </div>
-              <div className="tab-content">
-                <button onClick={() => handleTabClick('tabTwo')} className="tab-button">
-                  <p className="text-sm font-medium text-black dark:text-white xl:text-regular">Looking to Organize My Business →</p>
-                </button>
+              <div className="tab-contents">
+                <div onClick={() => handleTabClick('tabTwo')} className="tab-button"
+                  >
+                  <p className="text-sm font-medium text-black dark:text-white xl:text-regular"
+                  style={{
+                    fontFamily:'poppins'
+                  }}>Looking to Organize My Business →</p>
+                </div>
               </div>
             </motion.div>
           )}

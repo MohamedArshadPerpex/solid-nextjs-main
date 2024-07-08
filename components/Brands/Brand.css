@@ -10,11 +10,10 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: hsl(0, 0%, 20%);
   }
 
   h3.welcome-text {
-    color: whitesmoke;
+    color: rgb(5, 8, 70);
     font-size: 2vw;
     margin-left: 103px;
     margin-top: 178px;
@@ -31,66 +30,9 @@
   .text {
     font-size: 20vw;
     line-height: 0.8;
-    color: whitesmoke;
+    color: rgb(5, 8, 70);
     text-transform: uppercase;
     font-weight: bold;
   }
 
-  .wrap .text:nth-child(2),
-  .wrap .text:nth-child(3),
-  .crack {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  .wrap .text:nth-child(1) {
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-    transition: transform 0.2s;
-  }
-
-  .wrap .text:nth-child(2) {
-    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
-  }
-
-  .wrap .text:nth-child(3) {
-    opacity: 1;
-    transition: opacity 0.1s 0.2s;
-  }
-
-  .crack {
-  width: 100%;
-  height: 100%;
-  clip-path: polygon(50% 0, 50% 3%, 50% 100%, 50% 97%);
-  background-color: hsl(0, 0%, 20%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(90%, 90%);
-  transition: transform 0.2s;
-}
-
-.wrap:hover .crack {
-  transform: translate(0, 0);
-}
-
-.wrap:hover .text:nth-child(3) {
-  opacity: 0;
-  transition: opacity 0.1s 0.2s;
-}
-
-.wrap:hover .text:nth-child(2) {
-  transform: translate(5%, 5%);
-  transition: transform 0.2s 0.2s;
-}
-
-@media (max-width: 500px) {
-  h3.welcome-text {
-  color: whitesmoke;
-  font-size: 4vw;
-  margin-left: 88px;
-  margin-top: 178px;
-  position: absolute;
-  font-family: poppins;
-}
-}
+  

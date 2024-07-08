@@ -35,6 +35,13 @@
 }
 
 .Heading {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 26px;
+  color: rgb(5, 8, 70);
+  font-size: 38px;
+  width: 1300px;
+  line-height: 80px;
   height: 40px;
 }
 
@@ -69,17 +76,31 @@
   justify-content: center;
 }
 
+.tab-contents {
+
+  width: 100%;
+  /* Ensures each tab content occupies full width */
+  margin-bottom: 1rem;
+  /* Adjust spacing between tab contents */
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .tab-button {
+  background-image: url('https://interview-coach.co.uk/wp-content/uploads/2014/07/advance-career.jpg');
   height: 200px;
   width: 73%;
   padding: 0.75rem 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  /* Button border radius */
   text-align: center;
-  /* Align text to the left within button */
   transition: background-color 0.9s, color 0.3s;
-  /* Button transition effects */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tab-button:hover {
@@ -96,4 +117,18 @@
   font-size: 2rem;
   cursor: pointer;
   color: #555;
+}
+
+@media (max-width:600px) {
+  .Heading {
+  font-family: 'Courier New',
+  Courier,
+  monospace;
+  margin-top: -24px;
+  color: rgb(5, 8, 70);
+  font-size: 38px;
+  width: 401px;
+  line-height: 80px;
+  height: 40px;
+  }
 }

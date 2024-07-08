@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
@@ -7,13 +7,16 @@ import Image from 'next/image';
 const Contact = () => {
   const [fullname, setFullname] = useState('');
   const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
   const [emailError, setEmailError] = useState('');
   const [phoneError, setPhoneError] = useState('');
+  const [selectedProduct, setSelectedProduct] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
+  const [showServicesOptions, setShowServicesOptions] = useState(false); // State to manage Services options visibility
+  const [showCoursesOptions, setShowCoursesOptions] = useState(false); // State to manage Courses options visibility
 
   React.useEffect(() => {
     setHasMounted(true);
@@ -26,8 +29,9 @@ const Contact = () => {
     const formData = {
       fullname,
       email,
-      subject,
       phone,
+      product: selectedProduct,
+      option: selectedOption,
       message
     };
 
@@ -39,8 +43,9 @@ const Contact = () => {
         // Optionally clear form fields after successful submission
         setFullname('');
         setEmail('');
-        setSubject('');
         setPhone('');
+        setSelectedProduct('');
+        setSelectedOption('');
         setMessage('');
       } else {
         throw new Error('Failed to send message');
@@ -52,10 +57,6 @@ const Contact = () => {
       setSubmitting(false);
     }
   };
-
-  if (!hasMounted) {
-    return null;
-  }
 
   const validateEmail = (email) => {
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -88,6 +89,27 @@ const Contact = () => {
       setPhoneError('');
     }
   };
+
+  const handleProductChange = (e) => {
+    const { value } = e.target;
+    setSelectedProduct(value);
+    setSelectedOption('');
+    setShowServicesOptions(value === 'Services'); // Show Services options if selected product is Services
+    setShowCoursesOptions(value === 'Courses'); // Show Courses options if selected product is Courses
+  };
+
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+    setMessage(`I want to know more about ${option}`); // Update message based on selected option
+
+    // Close respective options list when an option is clicked
+    if (selectedProduct === 'Services') {
+      setShowServicesOptions(false);
+    } else if (selectedProduct === 'Courses') {
+      setShowCoursesOptions(false);
+    }
+  };
+
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
@@ -128,9 +150,9 @@ const Contact = () => {
               className="animate_top w-full rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black md:w-2/3 lg:w-3/4 xl:p-15 contact-section"
             >
               <h2 className="mb-15 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2 section-heading" style={{
-                marginTop: '29px'
+                marginTop: '29px',
               }}>
-                Send a message
+                Contact Us
               </h2>
 
               <form onSubmit={handleSubmit}>
@@ -154,20 +176,9 @@ const Contact = () => {
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                     required
                   />
-
                 </div>
                 {emailError && <p className="error">{emailError}</p>}
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
-                  <input
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
-                    required
-                  />
-
                   <input
                     type="text"
                     name="phone"
@@ -177,6 +188,62 @@ const Contact = () => {
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                     required
                   />
+                  <div className="relative">
+                    <select
+                      style={{
+                        width: '240px',
+                        height: '50px'
+                      }}
+                      name="product"
+                      value={selectedProduct}
+                      onChange={handleProductChange}
+                      className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                      required
+                    >
+                      <option value="" disabled>Select a product</option>
+                      <option value="Services">Services</option>
+                      <option value="Courses">Courses</option>
+                      {/* Add more products as needed */}
+                    </select>
+                    {showServicesOptions && (
+                      <ul className="absolute z-10 mt-1 py-2 w-full bg-white rounded-lg shadow-lg border border-gray-200 dark:bg-black dark:border-strokedark">
+                        <li
+                          className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 1' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                            }`}
+                          onClick={() => handleOptionClick('Option 1')}
+                        >
+                          Option 1
+                        </li>
+                        <li
+                          className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 2' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                            }`}
+                          onClick={() => handleOptionClick('Option 2')}
+                        >
+                          Option 2
+                        </li>
+                        {/* Add more options as needed */}
+                      </ul>
+                    )}
+                    {showCoursesOptions && (
+                      <ul className="absolute z-10 mt-1 py-2 w-full bg-white rounded-lg shadow-lg border border-gray-200 dark:bg-black dark:border-strokedark">
+                        <li
+                          className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Course 1' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                            }`}
+                          onClick={() => handleOptionClick('Course 1')}
+                        >
+                          Course 1
+                        </li>
+                        <li
+                          className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Course 2' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                            }`}
+                          onClick={() => handleOptionClick('Course 2')}
+                        >
+                          Course 2
+                        </li>
+                        {/* Add more courses as needed */}
+                      </ul>
+                    )}
+                  </div>
                 </div>
                 {phoneError && <p className="error">{phoneError}</p>}
                 <div className="mb-11.5 flex textarea-section">
@@ -189,14 +256,8 @@ const Contact = () => {
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                     required
                   ></textarea>
+
                 </div>
-                <h6 style={{
-                  textAlign: 'center',
-                  fontFamily: 'poppins',
-                  color: 'aliceblue',
-                  marginTop: '-14px',
-                  height: '40px'
-                }}>Connect To Perpex</h6>
                 <div className="flex justify-center">
                   <button
                     type="submit"
@@ -219,7 +280,6 @@ const Contact = () => {
                       />
                     </svg>
                   </button>
-
                 </div>
               </form>
             </motion.div>
@@ -242,31 +302,32 @@ const Contact = () => {
               className="animate_top w-full md:w-1/3 md:p-7.5 lg:w-[26%] xl:pt-15"
             >
               <h2 className="mb-12.5 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2" style={{
-                marginTop: '-38px'
+                marginTop: '38px',
               }}>
                 Find us
               </h2>
 
               <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white"
+                  >
                   Our Location
                 </h3>
-                <p>AL Rahaba Arcade, Chalappuram, Calicut </p>
+                <p >AL Rahaba Arcade, Chalappuram, Calicut </p>
               </div>
               <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white" >
                   Email Address
                 </h3>
                 <p>
-                  <a href="mailto:yourmail@domainname.com">info@perpex.com</a>
+                  <a href="info@perpex.com" >info@perpex.com</a>
                 </p>
               </div>
               <div>
-                <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white" >
                   Phone Number
                 </h4>
                 <p>
-                  <a href="tel:+009423346343843">+91 9745 1000 36</a>
+                  <a href="tel:+919745100036" >+91 9745 1000 36</a>
                 </p>
               </div>
             </motion.div>

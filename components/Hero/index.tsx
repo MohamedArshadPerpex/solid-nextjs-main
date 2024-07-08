@@ -15,7 +15,7 @@ const Hero = () => {
     "50,000+ Salary?",
     "On The Job Training Program?",
     "Organic Marketing Strategies?",
-    "Parallel Sales Team ",
+    "Parallel Sales Team? ",
     "Business Development Solutions?",
   ];
 
@@ -47,13 +47,13 @@ const Hero = () => {
             <div className="md:w-1/2" style={{
               width:'900px'
             }}>
-              <h1 className="mb-5 pr-16 text-3xl font-bold xl:text-5xl are-you">
+              <h1 className="mb-5 pr-16 text-3xl  xl:text-5xl are-you">
                 Are You Looking For {" "}
                 </h1>
                 <h1 className="mb-5 pr-16 text-3xl font-bold xl:text-5xl span-h1" style={{
                   marginTop:'-20px'
                 }}>
-                <span className="relative before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark span-text"
+                <span className="relative before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full dark:before:bg-titlebgdark span-text"
                 style={{
                   width:'600px',
                 }}>

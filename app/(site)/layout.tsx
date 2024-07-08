@@ -33,28 +33,23 @@ export default function RootLayout({
   }, []);
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`dark:bg-black ${inter.className}`}>
+      <body >
           {!loadingComplete && (
           <div className="loader-body">
           <div className="loader"></div>
-<h1>Custom Loading Animation By EAJUDDIN</h1>
         </div>
         
       )} 
       {loadingComplete && ( 
-        <ThemeProvider
-          enableSystem={false}
-          attribute="class"
-          defaultTheme="light"
-        >
-          <Lines />
-          <Backround />
+        <>
+        
+           
           <Header />
           {/* <Cursor /> */}
           <ToasterContext />
           {children}
           <ScrollToTop />
-        </ThemeProvider>
+        </>
           )} 
       </body>
     </html>

@@ -22,7 +22,7 @@
 
 @layer base {
   body {
-    @apply relative z-1 font-inter text-regular font-normal text-waterloo dark:text-manatee;
+    @apply relative z-1 font-inter text-regular font-normal;
   }
 }
 
@@ -164,8 +164,9 @@ pre {
 
 body {
   height: 5000px;
-  background: linear-gradient(to bottom, rgb(30, 30, 100));
+  /* background: linear-gradient(to bottom, rgb(30, 30, 100)); */
 }
+
 
 h1 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
