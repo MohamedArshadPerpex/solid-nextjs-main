@@ -83,7 +83,6 @@ h4{
   position: relative;
   transform-style: preserve-3d;
   transform-origin: center;
-  margin-top: 11px;
 }
 
 .swiper-slide .slide-content img,
@@ -365,4 +364,10 @@ h4{
 .swiper-slide .slide-content .overlay p{
   margin-top: 55px;
 }
+.images-slider{
+  margin-top: 200px;
+}
+.slider-controllers .slider-arrow {
+  margin-top: 0px;
+  }
 }

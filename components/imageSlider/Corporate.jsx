@@ -127,7 +127,7 @@ const Corporate = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className='swiper-container'>
-            <div className="slide-content">
+            <div className="slide-content images-slider">
               <img src={slide.image} alt={`slide_image_${index}`} onClick={() => handlePopup(slide)} />
               <div className={`overlay ${index === activeIndex ? 'active' : ''}`} onClick={() => handlePopup(slide)}>
                 <p>Show Details</p>
