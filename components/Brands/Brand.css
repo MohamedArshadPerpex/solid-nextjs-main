@@ -35,4 +35,18 @@
     font-weight: bold;
   }
 
-  
+  @media(max-width:500px){
+    .wrap {
+      margin-left: 59px;
+      margin-top: 301px;
+      position: relative;
+      }
+      h3.welcome-text {
+        color: rgb(5, 8, 70);
+        font-size: 3vw;
+        margin-left: 68px;
+        margin-top: 278px;
+        position: absolute;
+        font-family: poppins;
+        }
+  }

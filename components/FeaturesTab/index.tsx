@@ -22,7 +22,7 @@ const FeaturesTab = () => {
   return (
     <>
       <section className="relative pb-20 pt-18.5 lg:pb-22.5" ref={sectionRef}>
-        <div className="relative mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0" style={{ marginTop: '169px' }}>
+        <div className="relative mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 heders" style={{ marginTop: '169px' }}>
           <div className="absolute -top-16 -z-1 mx-auto h-[350px] w-[90%]">
             <h1 className="Heading font-bold">so why are you here?</h1>
           </div>

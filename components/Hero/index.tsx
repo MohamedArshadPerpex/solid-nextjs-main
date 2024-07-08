@@ -55,7 +55,7 @@ const Hero = () => {
                 }}>
                 <span className="relative before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full dark:before:bg-titlebgdark span-text"
                 style={{
-                  width:'600px',
+                  width:'450px',
                 }}>
                   {textOptions[currentTextIndex]}
                 </span>

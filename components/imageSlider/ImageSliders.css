@@ -359,10 +359,16 @@ h4{
     margin-top: -216px;
   }
 .swiper-slide .slide-content .overlay {
-  margin-top: 108px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 165px;
+  height: 178px;
 }
 .swiper-slide .slide-content .overlay p{
-  margin-top: 55px;
+  margin-top: 10px;
+  margin-left: 30px;
 }
 .images-slider{
   margin-top: 200px;
@@ -370,4 +376,12 @@ h4{
 .slider-controllers .slider-arrow {
   margin-top: 30px;
   }
+  .main-li {
+    width: 300px;
+    margin-top: 5px;
+    text-align: left;
+    font-size: 15px;
+    color: black;
+    }
+    
 }

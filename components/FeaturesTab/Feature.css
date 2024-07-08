@@ -121,14 +121,18 @@
 
 @media (max-width:600px) {
   .Heading {
-  font-family: 'Courier New',
-  Courier,
-  monospace;
-  margin-top: -24px;
-  color: rgb(5, 8, 70);
-  font-size: 38px;
-  width: 401px;
-  line-height: 80px;
-  height: 40px;
+    font-family: 'Courier New',
+    Courier,
+    monospace;
+    margin-left: -17px;
+    color: rgb(5, 8, 70);
+    font-size: 38px;
+    width: 362px;
+    line-height: 80px;
+    height: 40px;
+    margin-top: -30px;
+    }
+  .headers{
+    margin-top: 269px;
   }
 }
