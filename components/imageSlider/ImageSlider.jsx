@@ -70,11 +70,11 @@ const ImageSlider = () => {
             </div>
           </SwiperSlide>
         ))}
-        <div className="slider-controllers">
-          <div className="swiper-button-prev slider-arrow">
+        <div className="slider-controller">
+          <div className="swiper-button-prev slider-arrows">
             <IoIosArrowDropleftCircle />
           </div>
-          <div className="swiper-button-next slider-arrow">
+          <div className="swiper-button-next slider-arrows">
             <IoIosArrowDroprightCircle />
           </div>
         </div>
