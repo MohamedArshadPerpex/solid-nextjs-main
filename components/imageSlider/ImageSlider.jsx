@@ -66,7 +66,7 @@ const ImageSlider = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className={index === activeIndex ? 'active' : ''}>
             <div className="slide-contents">
-              <img src={slide.image} alt={`slide_images_${index}`} onClick={() => handlePopup(slide)} />
+              <img src={slide.image} alt={`slide_images_${index}`} />
             </div>
           </SwiperSlide>
         ))}

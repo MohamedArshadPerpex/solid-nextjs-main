@@ -46,10 +46,11 @@ const FeaturesTab = () => {
               className="animate_top mb-15 flex flex-col items-start gap-4 rounded-[10px] border border-stroke bg-white p-4 shadow-solid-5 dark:border-strokedark dark:bg-blacksection dark:shadow-solid-6 choices"
             >
               <div className="tab-content">
-                <div onClick={() => handleTabClick('tabOne')} className="tab-button">
+                <div onClick={() => handleTabClick('tabOne')} className="tab-buttons">
                   <p className="text-sm font-medium text-black dark:text-white xl:text-regular"
                   style={{
-                    fontFamily:'poppins'
+                    fontSize: '20px',
+                    fontWeight:'bold'
                   }}>Looking to Upskill My Career →</p>
                 </div>
               </div>
@@ -58,7 +59,8 @@ const FeaturesTab = () => {
                   >
                   <p className="text-sm font-medium text-black dark:text-white xl:text-regular"
                   style={{
-                    fontFamily:'poppins'
+                    fontSize: '20px',
+                    fontWeight:'bold'
                   }}>Looking to Organize My Business →</p>
                 </div>
               </div>

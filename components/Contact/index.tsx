@@ -210,38 +210,84 @@ const Contact = () => {
                         <li
                           className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 1' ? 'bg-gray-100 dark:bg-gray-800' : ''
                             }`}
-                          onClick={() => handleOptionClick('Option 1')}
+                          onClick={() => handleOptionClick('Meet Your Staffing Needs')}
                         >
-                          Option 1
+                          Meet Your Staffing Needs
                         </li>
                         <li
                           className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 2' ? 'bg-gray-100 dark:bg-gray-800' : ''
                             }`}
-                          onClick={() => handleOptionClick('Option 2')}
+                          onClick={() => handleOptionClick('Lets Crack the  CAC')}
                         >
-                          Option 2
+                         Lets Crack the  CAC
                         </li>
-                        {/* Add more options as needed */}
+                        <li
+                          className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 1' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                            }`}
+                          onClick={() => handleOptionClick('Ignite Your Sales Engine')}
+                        >
+                         Ignite Your Sales Engine
+                        </li>
+                        <li
+                          className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 2' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                            }`}
+                          onClick={() => handleOptionClick('Redesign Your Sales Funnel')}
+                        >
+                          Redesign Your Sales Funnel
+                        </li><li
+                          className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 1' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                            }`}
+                          onClick={() => handleOptionClick('Build Your Parallel Sales Team')}
+                        >
+                         Build Your Parallel Sales Team
+                        </li>
+                        <li
+                          className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 1' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                            }`}
+                          onClick={() => handleOptionClick('Switch To Organic Marketing')}
+                        >
+                         Switch To Organic Marketing
+                        </li>
                       </ul>
                     )}
                     {showCoursesOptions && (
-                      <ul className="absolute z-10 mt-1 py-2 w-full bg-white rounded-lg shadow-lg border border-gray-200 dark:bg-black dark:border-strokedark">
-                        <li
-                          className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Course 1' ? 'bg-gray-100 dark:bg-gray-800' : ''
-                            }`}
-                          onClick={() => handleOptionClick('Course 1')}
-                        >
-                          Course 1
-                        </li>
-                        <li
-                          className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Course 2' ? 'bg-gray-100 dark:bg-gray-800' : ''
-                            }`}
-                          onClick={() => handleOptionClick('Course 2')}
-                        >
-                          Course 2
-                        </li>
-                        {/* Add more courses as needed */}
-                      </ul>
+                     <ul className="absolute z-10 mt-1 py-2 w-full bg-white rounded-lg shadow-lg border border-gray-200 dark:bg-black dark:border-strokedark">
+                     <li
+                       className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 1' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                         }`}
+                       onClick={() => handleOptionClick('Funtamentals Of Business Development')}
+                     >
+                       Funtamentals Of Business Development
+                     </li>
+                     <li
+                       className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 2' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                         }`}
+                       onClick={() => handleOptionClick('Outbound Training for Immediate Placement')}
+                     >
+                      Outbound Training for Immediate Placement
+                     </li>
+                     <li
+                       className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 1' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                         }`}
+                       onClick={() => handleOptionClick('Professional Certificate in Business Development and Entrepreneurship')}
+                     >
+                      Professional Certificate in Business Development and Entrepreneurship
+                     </li>
+                     <li
+                       className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 2' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                         }`}
+                       onClick={() => handleOptionClick('Foundational Kit for Startup founders')}
+                     >
+                       Foundational Kit for Startup founders
+                     </li><li
+                       className={`px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 ${selectedOption === 'Option 1' ? 'bg-gray-100 dark:bg-gray-800' : ''
+                         }`}
+                       onClick={() => handleOptionClick('LevelUP : Campus to Corporate')}
+                     >
+                       LevelUP : Campus to Corporate
+                     </li>
+                    
+                   </ul>
                     )}
                   </div>
                 </div>

@@ -36,8 +36,7 @@
 
 .Heading {
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  margin-top: 26px;
+  margin-top: 16px;
   color: rgb(5, 8, 70);
   font-size: 38px;
   width: 1300px;
@@ -89,9 +88,9 @@
   justify-content: center;
 }
 
-.tab-button {
-  background-image: url('https://interview-coach.co.uk/wp-content/uploads/2014/07/advance-career.jpg');
-  height: 200px;
+.tab-buttons {
+  background-image: url('https://images.ctfassets.net/wp1lcwdav1p1/2nyRvduxx7AQTxIEI4G9gU/3cd4d7bb76ce7f9df3e97a398b0f20ba/GettyImages-1180522062.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive');
+  height: 300px;
   width: 73%;
   padding: 0.75rem 1rem;
   border: 1px solid #ccc;
@@ -101,9 +100,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+.tab-button {
+  background-image: url('https://www.teamly.com/blog/wp-content/uploads/2021/10/Organizing-Your-Business.png');
+  height: 300px;
+  width: 73%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.9s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .tab-button:hover {
+  cursor: pointer;
+  background-color: #555;
+  /* Button hover background color */
+  color: #222;
+  /* Button hover text color */
+}
+.tab-buttons:hover {
+  cursor: pointer;
   background-color: #555;
   /* Button hover background color */
   color: #222;
